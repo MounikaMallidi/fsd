@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <title>CUBE</title>
+        <style>
+            body{
+                height:100svh;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                background-color:black;
+            }
+            .cube_parent{
+                perspective: 1000px;
+            }
+            .cube{
+                width:210px;
+                height:210px;
+                animation:myanimation 5s linear infinite;
+                transform-style:preserve-3d;
+                position:relative;
+            }
+            .left, .right, .top, .bottom, .front, .back{
+                display:grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+                position:absolute;
+                width:210px;
+                height:210px;
+                opacity:0.9;
+            }
+            .left{
+                transform:rotateY(90deg) translateZ(105px) ;
+                background-color: red;
+            }
+            .child1, .child2, .child3, .child4, .child5, .child6{
+                width:67px;
+                height:67px;
+                border:1px solid black;
+                
+            }
+            .right{
+                transform:rotateY(90deg) translateZ(-105px) ;
+                background-color: yellow;
+            }
+            .top{
+                transform:rotateX(90deg) translateZ(-105px) ;
+                background-color: blue;
+            }
+            .bottom{
+                transform:rotateX(90deg) translateZ(105px) ;
+                background-color: green;
+            }
+            .front{
+                transform:translateZ(105px) ;
+                background-color: orange;
+            }
+            .back{
+                transform:translateZ(-105px) ;
+                background-color: white;
+            }
+            @keyframes myanimation{
+                100%{
+                    transform:rotateX(360deg) rotateY(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cube_parent">
+            <div class="cube">
+                <div class="left">
+                    <div class="child1"></div>
+                    <div class="child1"></div>
+                    <div class="child1"></div>
+                    <div class="child1"></div>
+                    <div class="child1"></div>
+                    <div class="child1"></div>
+                    <div class="child1"></div>
+                    <div class="child1"></div>
+                    <div class="child1"></div>
+                </div>
+                <div class="right">
+                    <div class="child2"></div>
+                    <div class="child2"></div>
+                    <div class="child2"></div>
+                    <div class="child2"></div>
+                    <div class="child2"></div>
+                    <div class="child2"></div>
+                    <div class="child2"></div>
+                    <div class="child2"></div>
+                    <div class="child2"></div>
+                </div>
+                <div class="top">
+                    <div class="child3"></div>
+                    <div class="child3"></div>
+                    <div class="child3"></div>
+                    <div class="child3"></div>
+                    <div class="child3"></div>
+                    <div class="child3"></div>
+                    <div class="child3"></div>
+                    <div class="child3"></div>
+                    <div class="child3"></div>
+                </div>
+                <div class="bottom">
+                    <div class="child4"></div>
+                    <div class="child4"></div>
+                    <div class="child4"></div>
+                    <div class="child4"></div>
+                    <div class="child4"></div>
+                    <div class="child4"></div>
+                    <div class="child4"></div>
+                    <div class="child4"></div>
+                    <div class="child4"></div>
+                </div>
+                <div class="front">
+                    <div class="child5"></div>
+                    <div class="child5"></div>
+                    <div class="child5"></div>
+                    <div class="child5"></div>
+                    <div class="child5"></div>
+                    <div class="child5"></div>
+                    <div class="child5"></div>
+                    <div class="child5"></div>
+                    <div class="child5"></div>
+                </div>
+                <div class="back">
+                    <div class="child6"></div>
+                    <div class="child6"></div>
+                    <div class="child6"></div>
+                    <div class="child6"></div>
+                    <div class="child6"></div>
+                    <div class="child6"></div>
+                    <div class="child6"></div>
+                    <div class="child6"></div>
+                    <div class="child6"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
