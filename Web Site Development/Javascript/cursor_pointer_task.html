@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Task</title>
+        <style>
+            body{
+                background-color:black;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+            .big-circle{
+                width:50px;
+                height:50px;
+                border-radius:100%;
+                border:3px solid white;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                position:absolute;
+            }
+            .small-circle{
+                width:20px;
+                height:20px;
+                border-radius:100%;
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="big-circle" id="circle">
+        <div class="small-circle"></div>
+    </div>
+    <script>
+        const circle = document.querySelector("#circle");
+        document.addEventListener("mousemove", (e) => {
+            const offsetX = circle.offsetWidth / 2;
+            const offsetY = circle.offsetHeight / 2;
+            circle.style.left = `${e.clientX - offsetX}px`;
+            circle.style.top = `${e.clientY - offsetY}px`;
+
+        });
+    </script>
+
+</body>
+</html>

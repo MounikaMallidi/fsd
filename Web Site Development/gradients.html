@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title>Gradients</title>
+        <style>
+            .grad1{
+                width:200px;
+                height:200px;
+                background-image: linear-gradient(red,aqua,green);
+            }
+            .grad2{
+                width:200px;
+                height:200px;
+                background-image:linear-gradient(to top, aqua,brown,navy);
+                position:absolute;
+                top:9%;
+                left:15%
+            }
+            .grad3{
+                 width:200px;
+                height:200px;
+                background-image:linear-gradient(to left, rgb(79, 112, 112),rgb(19, 187, 225),rgb(21, 21, 228));
+                position:absolute;
+                top:9%;
+                left:30%
+            }
+            .grad4{
+                 width:200px;
+                height:200px;
+                background-image:linear-gradient(to right, rgb(180, 19, 172),rgb(215, 203, 65),rgb(165, 68, 35));
+                position:absolute;
+                top:9%;
+                left:45%
+            }
+            .grad5{
+                width:200px;
+                height:200px;
+                background-image:linear-gradient(to top left, rgb(2, 239, 108),rgb(162, 140, 228),rgb(104, 209, 23));
+                position:absolute;
+                top:9%;
+                left:60%
+            }
+            .grad6{
+                 width:200px;
+                height:200px;
+                background-image:linear-gradient(to bottom left, rgb(34, 175, 175),rgb(203, 49, 224),rgb(226, 78, 20));
+                position:absolute;
+                top:9%;
+                left:75%
+            }
+            .grad7{
+                 width:200px;
+                height:200px;
+                background-image:linear-gradient(to top right, rgb(53, 201, 214),rgb(215, 203, 65),rgb(16, 111, 87));
+                position:absolute;
+                top:9%;
+                left:90%
+            }
+            .grad8{
+                 width:200px;
+                height:200px;
+                background-image:linear-gradient(to bottom right, rgb(188, 174, 188),rgb(215, 203, 65),rgb(235, 101, 57));
+                position:absolute;
+                top:9%;
+                left:105%
+            }
+            .grad9{
+                width:200px;
+                height:200px;
+                background:linear-gradient(to bottom left, rgb(34, 175, 175, 0.1),rgb(203, 49, 224, 0.5),rgb(226, 78, 20, 0.6)) ,
+                linear-gradient(to right,red, black, green);
+                position:absolute;
+                top:44%;
+                left:0.5%;
+            }
+            .grad10{
+                 width:200px;
+                height:200px;
+                background:repeating-linear-gradient(to top left, black 0%,aqua 5%,navy 10%);
+                position:absolute;
+                top:80%;
+                left:0.5%;
+            }
+            .grad11{
+                 width:200px;
+                height:200px;
+                background-image:radial-gradient(rgb(25, 192, 214) 20%,rgb(219, 40, 189) 40%,rgb(236, 64, 7) 60%,transparent);
+                position:absolute;
+                top:115%;
+                left:0.5%
+            }
+            .grad12{
+                 width:200px;
+                height:200px;
+                background:repeating-radial-gradient(rgb(25, 192, 214) 10%,rgb(219, 40, 189) 20%,rgb(236, 64, 7) 30%);
+                position:absolute;
+                top:160%;
+                left:0.5%
+            }
+            .grad13{
+                 width:200px;
+                height:200px;
+                background-image:conic-gradient(at 30% 50%, rgb(113, 25, 214) ,rgb(141, 159, 61) ,rgb(3, 244, 236) );
+                position:absolute;
+                top:195%;
+                left:0.5%;
+                border-radius:100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Linear-gradient</h1>
+        <div class="grad1"></div>
+        <div class="grad2"></div>
+        <div class="grad3"></div>
+        <div class="grad4"></div>
+        <div class="grad5"></div>
+        <div class="grad6"></div>
+        <div class="grad7"></div>
+        <div class="grad8"></div>
+        <h1>Linear-gradient(combination)</h1>
+        <div class="grad9"></div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <h1>Linear-gradient(Repitition)</h1>
+        <div class="grad10"></div><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <h1>Radial-Gradient</h1>
+        <div class="grad11"></div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+         <h1>Radial-Gradient(repeating)</h1>
+        <div class="grad12"></div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+         <h1>conic-Gradient</h1>
+        <div class="grad13"></div>
+    </body>
+</html>

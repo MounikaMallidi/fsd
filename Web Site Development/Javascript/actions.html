@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Event Tester</title>
+    <script>
+        function fun(){
+            document.getElementById("output").innerText += "Mounika\n";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="fun()">Click</button>
+    <button ondblclick="fun()">Double Click</button>
+    <button onmouseover="fun()">Mouse Over</button>
+    <button onmouseenter="fun()">Mouse Enter</button>
+    <button onmouseleave="fun()">Mouse Leave</button>
+    <button onmouseout="fun()">Mouse Out</button>
+    <button onmouseup="fun()">Mouse Up</button>
+    <button onmousedown="fun()">Mouse Down</button>
+    <button onkeyup="fun()">Key Up</button>
+    <button onkeydown="fun()">Key Down</button>
+
+    <p id="output" style="white-space: pre-line; font-size: 20px; color: green;"></p>
+</body>
+</html>

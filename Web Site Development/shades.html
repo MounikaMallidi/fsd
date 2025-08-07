@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Color Showcase</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    :root {
+  --primary-color: #007BFF;
+  --primary-light: #E6F0FF;
+  --primary-dark: #0056b3;
+
+  --success-color: #28a745;
+  --success-light: #d4edda;
+
+  --warning-color: #ffc107;
+  --warning-light: #fff3cd;
+
+  --error-color: #dc3545;
+  --error-light: #f8d7da;
+
+  --text-color: #212529;
+  --muted-text: #6c757d;
+
+  --background-color: #ffffff;
+  --secondary-background: #f8f9fa;
+  --border-color: #dee2e6;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  padding: 2rem;
+}
+
+.card {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid;
+  border-radius: 4px;
+}
+
+.primary {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-dark);
+}
+
+.primary-light {
+  background-color: var(--primary-light);
+  border-color: var(--primary-color);
+}
+
+.primary-dark {
+  background-color: var(--primary-dark);
+  color: white;
+  border-color: var(--primary-light);
+}
+
+.success {
+  background-color: var(--success-light);
+  border-color: var(--success-color);
+}
+
+.warning {
+  background-color: var(--warning-light);
+  border-color: var(--warning-color);
+}
+
+.error {
+  background-color: var(--error-light);
+  border-color: var(--error-color);
+}
+
+.neutral {
+  background-color: var(--secondary-background);
+  border-color: var(--border-color);
+}
+
+.muted {
+  color: var(--muted-text);
+}
+
+footer {
+  text-align: center;
+  background-color: var(--primary-light);
+  color: var(--muted-text);
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Healthcare App – Color Palette Demo</h1>
+  </header>
+
+  <main>
+    <section class="card primary">
+      <h2>Primary Section</h2>
+      <p>This is the primary color (#007BFF) for action buttons, headers, and branding.</p>
+    </section>
+
+    <section class="card primary-light">
+      <h2>Primary Light</h2>
+      <p>Used for light backgrounds or hover effects.</p>
+    </section>
+
+    <section class="card primary-dark">
+      <h2>Primary Dark</h2>
+      <p>Used for darker accents or text on hover.</p>
+    </section>
+
+    <section class="card success">
+      <h2>Success Message</h2>
+      <p>Health improving! Great job following your diet.</p>
+    </section>
+
+    <section class="card warning">
+      <h2>Warning Notice</h2>
+      <p>You may be dehydrated. Increase fluid intake.</p>
+    </section>
+
+    <section class="card error">
+      <h2>Error Alert</h2>
+      <p>Severe symptom detected. Seek medical attention!</p>
+    </section>
+
+    <section class="card neutral">
+      <h2>Neutral Background</h2>
+      <p>This section uses secondary background and muted text.</p>
+      <p class="muted">Muted information appears here.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Healthcare App</p>
+  </footer>
+</body>
+</html>

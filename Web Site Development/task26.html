@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>3D Room</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .container{
+                width:100%;
+                height:100vh;
+                display:flex;
+                flex-wrap:wrap;
+                justify-content:center;
+                align-items:center;
+                overflow:hidden;
+            }
+            .border{
+                width:700px;
+                height:500px;
+                border:2px solid grey;
+                overflow:hidden;
+                position:relative;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                background-color:whitesmoke;
+            }
+            .room{
+                width:100%;
+                height:100%;
+                transform-style:preserve-3d;
+                perspective: 100px;
+                border:2px solid white;
+                box-shadow:0px 0px 7px 3px rgb(171, 170, 170);
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+            .wall{
+                width:250px;
+                height:170px;
+                box-shadow:0px 0px 7px 3px rgb(171, 170, 170);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .front{
+                width:250px;
+                height:170px;
+                border:0.5px solid grey;
+                box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.3), 0px 0px 7px 3px rgb(171, 170, 170);
+                background-color:white;
+            }
+            .wall1{
+                transform-origin: top;
+                transform: translate(-50%, -50%)  rotateX(94deg) ;
+                box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.3),0px 0px 7px 3px rgb(171, 170, 170);
+            }
+            .wall2{
+                transform-origin: bottom;
+                transform: translate(-50%, -50%) rotateX(-94deg);
+                box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.3),0px 0px 7px 3px rgb(171, 170, 170);
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="border">
+                <div class="room">
+                    <div class=" front"></div>
+                    <div class="wall wall1"></div>
+                    <div class="wall wall2"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

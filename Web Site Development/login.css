@@ -1,0 +1,111 @@
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100vh;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-63998.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.container{
+    width: 350px;
+    height: 400px;
+}
+
+#flip-toggle{
+    display:none;
+}
+.card{
+    width:100%;
+    height:100%;
+    position:relative;
+    transform-style:preserve-3d;
+    transition: transform 0.8s ease;
+}
+#flip-toggle:checked ~ .card{
+    transform: rotateY(180deg);
+}
+.card:hover{
+    box-shadow: 0 4px 15px 7px rgba(0, 0, 0, 0.2);
+    width:370px;
+    height:420px;
+}
+.side {
+    width:100%;
+    height:100%;
+    position:absolute;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 20px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+    background: white;
+    box-sizing: border-box;
+}
+.side h2 {
+    margin-bottom: 20px;
+    margin-top:0px;
+    font-size:35px;
+    position:relative;
+}
+.card:hover h2{
+    font-size:36px;
+}
+.side input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size:15px;
+    background:transparent;
+    box-shadow: 3px 5px 5px grey;
+    border:none;
+    text-align:50px;
+    position:relative;
+    padding-left:40px;
+}
+.inputfield .fa-solid{
+    position:absolute;
+    padding:10px;
+}
+.side p{
+    margin-top:-10px;
+    margin-left:175px;
+    color:  #007bff;
+    cursor: pointer;
+}
+p:active{
+    color:red;
+}
+.side button {
+    cursor: pointer;
+    margin-top:5px;
+    width:100%;
+    height: 35px;
+    font-size:16px;
+    border-radius:100px;
+    border:1px solid black;
+    background-color: #007bff;
+
+}
+button:active{
+    
+    background-color: #0d66c6;
+}
+.side label {
+    display: block;
+    margin-top: 20px;
+    color: #007bff;
+    cursor: pointer;
+    font-size:20px;
+}
+label:active{
+    color:red;
+}
+
+#back {
+    transform: rotateY(180deg);
+}

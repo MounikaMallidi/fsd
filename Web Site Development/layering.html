@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Layers</title>
+        <style>
+            .parent1{
+                width:200px;
+                height:300px;
+                border:2px solid black;
+                background-color: red;
+                position:absolute;
+                top:10px;
+                left:30px;
+                z-index:2;
+            }
+            .parent2{
+                width:200px;
+                height:300px;
+                border:2px solid black;
+                background-color: rgb(34, 17, 216);
+                position:absolute;
+                top:50px;
+                left:70px;
+                z-index:200;
+            }
+            .parent3{
+                width:200px;
+                height:300px;
+                border:2px solid black;
+                background-color: rgb(43, 167, 212);
+                position:absolute;
+                top:90px;
+                left:120px;
+                z-index:0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent1"></div>
+        <div class="parent2"></div>
+        <div class="parent3"></div>
+    </body>
+</html>

@@ -1,0 +1,717 @@
+<html>
+    <head>
+        <title>MAN-taSK</title>
+        <style>
+            .container {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+            }
+            .hair{
+                position:absolute;
+                width:150px;
+                height:50px;
+                background-color: rgb(255, 255, 255);
+                top:40px;
+                left:43%;
+            }
+            .hair1{
+                width:110px;
+                height:50px;
+                background-color: black;
+                border-radius:100%/0% 90% 0% 200%;
+                position:absolute;
+                top:0px;
+                left:0%;
+                box-shadow:-1px -1px 7px;
+            }
+            .hair2{
+                width:50px;
+                height:50px;
+                background-color: black;
+                border-radius:100%;
+                position:absolute;
+                top:15px;
+                left:60%;
+                box-shadow:2px -1px 7px;
+            }
+            .hair3{
+                width:90px;
+                height:100px;
+                background-color: black;
+                border-top-left-radius: 40%;
+                border-bottom-left-radius: 40%;
+                position:absolute;
+                top:50%;
+                left:9%;
+                box-shadow:2px -1px 10px;
+            }
+            .hair4{
+                width:50px;
+                height:100px;
+                background-color: black;
+                border-top-right-radius: 40%;
+                border-bottom-right-radius: 50%;
+                position:absolute;
+                top:50%;
+                left:65%;
+                box-shadow:2px -1px 10px;
+            }
+            .hair5{
+                width:50px;
+                height:20px;
+                background-color: black;
+                border-radius: 100%;
+                position:absolute;
+                top:40%;
+                left:35%;
+                z-index:2;
+                box-shadow:0px 1px 5px;
+            }
+            .head{
+                width:130px;
+                height:150px;
+                border-radius:100%/70% 70% 130% 130%;
+                background-color:antiquewhite;
+                position:absolute;
+                top:10%;
+                left:45%;
+                z-index:1;
+                border:1px solid rgb(250, 209, 156);
+                box-shadow:0.5px 0.5px 1px;
+    
+            }
+            .eyes1{
+                position:absolute;
+                width:40px;
+                height:23px;
+                border-radius: 100%/80% 80% 80% 80%;
+                background-color:white;
+                position:absolute;
+                top:30%;
+                left:10%;
+                border:2px solid rgb(243, 213, 171);
+                box-shadow:0px -2px 3px black;
+
+            }
+            .eyes2{
+                position:absolute;
+                width:40px;
+                height:23px;
+                border-radius: 100%/80% 80% 80% 80%;
+                background-color:white;
+                position:absolute;
+                top:30%;
+                left:55%;
+                border:2px solid rgb(243, 213, 171);
+                box-shadow:0px -2px 3px black;
+            }
+            .eyes3{
+                width:15px;
+                height:15px;
+                position:absolute;
+                background-color: rgb(17, 203, 104);
+                border-radius: 100%;
+                top:33%;
+                left:20%
+            }
+            .eyes4{
+                width:15px;
+                height:15px;
+                position:absolute;
+                background-color: rgb(17, 203, 104);
+                border-radius: 100%;
+                top:33%;
+                left:65%
+            }
+            .eyes5{
+                width:10px;
+                height:10px;
+                position:absolute;
+                background-color: rgb(55, 35, 35);
+                border-radius: 100%;
+                top:34.5%;
+                left:22%;
+                
+            }
+            .eyes6{
+                width:10px;
+                height:10px;
+                position:absolute;
+                background-color: rgb(55, 35, 35);
+                border-radius: 100%;
+                top:34.5%;
+                left:67%;
+            }
+             .eyes7{
+                width:45px;
+                height:6px;
+                position:absolute;
+                background-color: rgb(55, 35, 35);
+                border-top-left-radius: 100% ;
+               
+                top:23%;
+                left:8%;
+            }
+            .eyes8{
+                 width:45px;
+                height:6px;
+                position:absolute;
+                background-color: rgb(55, 35, 35);
+                border-top-right-radius: 100% ;
+               
+                top:23%;
+                left:55%;
+
+            }
+            .mouth{
+                width:40px;
+                height:14px;
+                background-color: rgb(213, 46, 102);
+                position:absolute;
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+                top:72%;
+                left:33%;
+                
+            }
+            .mouth1{
+                width:35px;
+                height:4px;
+                background-color: rgb(255, 255, 255);
+                position:absolute;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                top:72%;
+                left:35%
+                
+            }     
+                
+            .nose1{
+                width:10px;
+                height:10px;
+                border-radius:100%;
+                background-color: chocolate;
+                position:absolute;
+                top:55%;
+                left:40%;
+                box-shadow:0px 0px 3px ;
+            }
+            .nose2{
+                width:10px;
+                height:10px;
+                border-radius:100%;
+                background-color: chocolate;
+                position:absolute;
+                top:55%;
+                left:51%;
+                box-shadow:0px 0px 3px ;
+            }
+            .nose3{
+                width:10px;
+                height:10px;
+                border-radius:100%;
+                background-color: chocolate;
+                position:absolute;
+                top:58%;
+                left:45%;
+                box-shadow:0px 0px 3px ;
+            }
+            .nose4{
+                width:9px;
+                height:10px;
+                border-radius:100%;
+                background-color:antiquewhite;
+                position:absolute;
+                top:53%;
+                left:41%;
+            }
+            .nose5{
+                width:9px;
+                height:10px;
+                border-radius:100%;
+                background-color:antiquewhite;
+                position:absolute;
+                top:53%;
+                left:50%;
+            }
+            .nose6{
+                width:9px;
+                height:10px;
+                border-radius:100%;
+                background-color:antiquewhite;
+                position:absolute;
+                top:57%;
+                left:45.5%;
+            }
+            .nose7{
+                width:1px;
+                height:33px;
+                background-color: chocolate;
+                border-radius: 100%;
+                position:absolute;
+                top:40%;
+                left:53%;
+                box-shadow:0px 0px 1px;
+
+            }  
+            .ear1{
+                width:20px;
+                height:50px;
+                background-color: antiquewhite;
+                border-radius: 100%;
+                position:absolute;
+                top:53px;
+                left:-8px;
+                
+
+            }
+            .ear2{
+                width:20px;
+                height:50px;
+                background-color: antiquewhite;
+                border-radius: 100%;
+                position:absolute;
+                top:53px;
+                left:90.4%;
+               
+            }
+            .neck{
+                width:45px;
+                height:35px;
+                background-color: antiquewhite;
+                position:absolute;
+                top:30%;
+                left:50.5%;
+                border:1px solid rgb(250, 209, 156);
+                box-shadow:0px 0px 1px;
+            }
+            .body{
+                width:100%;
+                height:60%;
+                position:absolute;
+                top:30%;
+                z-index:1;
+            }
+            .body1{
+                width:200px;
+                height:200px;
+                background-color: rgb(90, 178, 178);
+                position:absolute;
+                top:8%;
+                left:40%;
+                border-top-left-radius: 40px;
+                border-top-right-radius: 40px;
+                border:1px solid rgb(30, 59, 59);
+                box-shadow:1px 4px 5px;
+
+            }
+            .body2{
+                width:100px;
+                height:15px;
+                background-color:antiquewhite;
+                position:absolute;
+                top:7%;
+                left:47%;
+                border-radius: 100%/70% 70% 200% 200%;
+                box-shadow:1px 4px 5px;
+    
+                
+            }
+            .body3{
+                width:50px;
+                height:55px;
+                background-color: rgb(53, 87, 99);
+                position:absolute;
+                top:18%;
+                left:57%;
+                border-bottom-left-radius: 40px;
+                border-bottom-right-radius: 40px;
+                box-shadow:1px 4px 5px;
+            }
+            .body4{
+                width:100px;
+                height:100px;
+                background-color: rgb(53, 87, 99);
+                position:absolute;
+                top:56%;
+                left:40%;
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 40%;
+                box-shadow:1px 4px 5px;
+            }
+            .body5{
+                width:100px;
+                height:100px;
+                background-color: rgb(53, 87, 99);
+                position:absolute;
+                top:56%;
+                left:54%;
+                border-bottom-left-radius: 40%;
+                border-bottom-right-radius: 30px;
+                box-shadow:1px 4px 5px;
+            }
+             .body6{
+                width:40px;
+                height:100px;
+                background-color:antiquewhite;
+                position:absolute;
+                top:80%;
+                left:44%;
+                border:1px solid rgb(250, 209, 156);
+                box-shadow:1px 4px 5px;
+            }
+            .body7{
+                width:40px;
+                height:100px;
+                background-color:antiquewhite;
+                position:absolute;
+                top:80%;
+                left:58.5%;
+                border:1px solid rgb(250, 209, 156);
+                box-shadow:1px 4px 4px;
+            }
+            .body8{
+                width:50px;
+                height:3px;
+                background-color: white;
+                position:absolute;
+                top:20%;
+                left:57%;
+            }
+            .body9{
+                width:1px;
+                height:100px;
+                background-color: white;
+                position:absolute;
+                top:56%;
+                left:54%;
+            }
+            .body10{
+                 width:40px;
+                height:60px;
+                background-color:rgb(65, 57, 57);
+                position:absolute;
+                top:100%;
+                left:58.5%;
+                 border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                box-shadow:1px 1px 8px;
+            }
+            .body11{
+                width:40px;
+                height:60px;
+                background-color:rgb(65,57,57);
+                position:absolute;
+                top:100%;
+                left:44%;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                box-shadow:1px 1px 8px;
+            }
+             .body12{
+                width:50px;
+                height:3px;
+                background-color: white;
+                position:absolute;
+                top:105%;
+                left:57%;
+            }
+             .body13{
+                width:50px;
+                height:3px;
+                background-color: white;
+                position:absolute;
+                top:107%;
+                left:57%;
+            }
+             .body14{
+                width:50px;
+                height:3px;
+                background-color: white;
+                position:absolute;
+                top:105%;
+                left:44%;
+            }
+             .body15{
+                width:50px;
+                height:3px;
+                background-color: white;
+                position:absolute;
+                top:107%;
+                left:44%;
+            }
+            .body16{
+                width:80px;
+                height:40px;
+                background-color: red;
+                position:absolute;
+                top:114%;
+                left:39%;
+                border-top-left-radius: 100%;
+                border-bottom-left-radius:20%;
+                border:1px solid black;
+                box-shadow:1px 1px 8px;
+            }
+             .body17{
+                 width:80px;
+                height:40px;
+                background-color: red;
+                position:absolute;
+                top:114%;
+                left:58%;
+                border-top-right-radius: 100%;
+                border-bottom-right-radius: 20%;
+                border:1px solid black;
+                box-shadow:1px 1px 8px;
+            }
+            .body18{
+                width:130px;
+                height:30px;
+                background-color: antiquewhite;
+                position:absolute;
+                top:10%;
+                left:22.5%;
+                border:1px solid rgb(250, 209, 156);
+            
+            }
+            .body19{
+                width:130px;
+                height:30px;
+                background-color: antiquewhite;
+                position:absolute;
+                top:10%;
+                left:67%;
+                border:1px solid rgb(250, 209, 156);
+            }
+            .body20{
+                width:70px;
+                height:40px;
+                background-color:rgb(90, 178, 178) ;
+                position:absolute;
+                top:8%;
+                left:35%;
+                border-top-left-radius: 10%;
+                border-bottom-left-radius:10%;
+                
+                
+            }
+            .body21{
+                width:70px;
+                height:40px;
+                background-color:rgb(90, 178, 178) ;
+                position:absolute;
+                top:8%;
+                left:62%;
+                border-top-right-radius: 10%;
+                border-bottom-right-radius:10%;
+            }
+            .body22{
+                width:40px;
+                height:40px;
+                background-color: antiquewhite;
+                 position:absolute;
+                top:8.7%;
+                left:19%;
+                border-radius: 10px 90% 10px 10px;
+                border:1px solid rgb(250, 209, 156);
+                box-shadow:1px 1px px;
+            }
+             .body23{
+                width:40px;
+                height:40px;
+                background-color: antiquewhite;
+                 position:absolute;
+                top:8.7%;
+                left:83%;
+                border-radius: 90% 10px 10px 10px;
+                border:1px solid rgb(250, 209, 156);
+            }
+            .body24{
+                width:10px;
+                height:25px;
+                background-color: antiquewhite;
+                position:absolute;
+                top:3%;
+                left:20.5%;
+                border-top-left-radius: 100%;
+                border:1px solid rgb(250, 209, 156);
+            }
+            .body25{
+                width:20px;
+                height:8px;
+                background-color: antiquewhite;
+                position:absolute;
+                top:16.5%;
+                left:17%;
+                border-radius: 100% 0% 0% 100%;
+                border:1px solid rgb(250, 209, 156);
+            }
+            .body26{
+                width:25px;
+                height:8px;
+                background-color: antiquewhite;
+                position:absolute;
+                top:14.5%;
+                left:16%;
+                border-radius: 100% 0% 0% 100%;
+                border:1px solid rgb(250, 209, 156);
+            }
+            .body27{
+                width:30px;
+                height:8px;
+                background-color: antiquewhite;
+                position:absolute;
+                top:12.3%;
+                left:15%;
+                border-radius: 100% 0% 0% 100%;
+                border:1px solid rgb(250, 209, 156);
+            }
+            .body28{
+                width:25px;
+                height:8px;
+                background-color: antiquewhite;
+                position:absolute;
+                top:10%;
+                left:16%;
+                border-radius: 100% 0% 0% 100%;
+                border:1px solid rgb(250, 209, 156);
+            }
+            .body29{
+                width:10px;
+                height:25px;
+                background-color: antiquewhite;
+                position:absolute;
+                top:3%;
+                left:85.5%;
+                border-top-right-radius: 100%;
+                border:1px solid rgb(250, 209, 156);
+            }
+            .body30{
+                width:20px;
+                height:8px;
+                background-color: antiquewhite;
+                position:absolute;
+                top:16.2%;
+                left:87.5%;
+                border-radius: 0% 100% 100% 0%;
+                border:1px solid rgb(250, 209, 156);
+            }
+            .body31{
+                width:25px;
+                height:8px;
+                background-color: antiquewhite;
+                position:absolute;
+                top:13.9%;
+                left:88%;
+                border-radius: 0% 100% 100% 0%;
+                border:1px solid rgb(250, 209, 156);
+            }
+            .body32{
+                width:30px;
+                height:8px;
+                background-color: antiquewhite;
+                position:absolute;
+                top:11.7%;
+                left:88.4%;
+                border-radius: 0% 100% 100% 0%;
+                border:1px solid rgb(250, 209, 156);
+            }
+            .body33{
+                width:25px;
+                height:8px;
+                background-color: antiquewhite;
+                position:absolute;
+                top:9.5%;
+                left:88%;
+                border-radius: 0% 100% 100% 0%;
+                border:1px solid rgb(250, 209, 156);
+            }
+            .body34{
+                width:28%;
+                height:30px;
+                background-color: rgb(170, 207, 204);
+                position:absolute;
+                top:50%;
+                left:40%;
+                border:1px solid rgb(30, 59, 59);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class="hair">
+                <div class="hair1"></div>
+                <div class="hair2"></div>
+                <div class="hair3"></div>
+                <div class="hair4"></div>
+                <div class="hair5"></div>
+            </div>
+        <div class="head">
+            <div class="eyes">
+                <div class="eyes1"></div>
+                <div class="eyes2"></div>
+                <div class="eyes3"></div>
+                <div class="eyes4"></div>
+                <div class="eyes5"></div>
+                <div class="eyes6"></div>
+                <div class="eyes7"></div>
+                <div class="eyes8"></div>
+            </div>
+            <div class="nose"></div>
+            <div class="nose1"></div>
+            <div class="nose2"></div>
+             <div class="nose3"></div>
+             <div class="nose4"></div>
+             <div class="nose5"></div>
+             <div class="nose6"></div>
+             <div class="nose7"></div>
+            <div class="mouth"></div>
+             <div class="mouth1"></div>
+            <div class="ear">
+                <div class="ear1"></div>
+                <div class="ear2"></div>
+            </div>
+        </div>
+        <div class="neck"></div>
+        <div class="body">
+            <div class="body1"></div>
+            <div class="body2"></div>
+            <div class="body3"></div>
+            <div class="body4"></div>
+            <div class="body5"></div>
+            <div class="body6"></div>
+            <div class="body7"></div>
+            <div class="body8"></div>
+            <div class="body9"></div>
+            <div class="body10"></div>
+            <div class="body11"></div>
+            <div class="body12"></div>
+            <div class="body13"></div>
+            <div class="body14"></div>
+            <div class="body15"></div>
+            <div class="body16"></div>
+            <div class="body17"></div>
+            <div class="body18"></div>
+            <div class="body19"></div>
+            <div class="body20"></div>
+            <div class="body21"></div>
+            <div class="body22"></div>
+            <div class="body23"></div>
+            <div class="body24"></div>
+            <div class="body25"></div>
+            <div class="body26"></div>
+            <div class="body27"></div>
+            <div class="body28"></div>
+            <div class="body29"></div>
+            <div class="body30"></div>
+            <div class="body31"></div>
+            <div class="body32"></div>
+            <div class="body33"></div>
+            <div class="body34"></div>
+            <div class="body35"></div>
+            <div class="body36"></div>
+        </div>
+        </div>
+    </body>
+</html>

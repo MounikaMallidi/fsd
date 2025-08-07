@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Selectors</title>
+         <style>
+            /*Universal Selector*/
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            /*Class Selector*/
+            .myheader{
+                color: aqua;
+                background-color: bisque;
+                border: 2px solid red;
+                height: 40px;
+                width: 150px;
+            }
+
+            /*Id Selector*/
+            #mypara{
+                color:pink;
+                background-color: darkgrey;
+            }
+            #mydiv{
+                color:hotpink;
+                background-color: deepskyblue;
+            }
+
+            /*Group Selectors*/
+            h1, p, .group, #head, #header{
+                color: chartreuse;
+                background-color: darkmagenta;
+            }
+
+            /*Nested Selectors*/
+            .myhome #myroom b{
+                color: darkturquoise;
+                background-color: greenyellow;
+                font-size: 30px;
+            }
+            i #myhome .myroom{
+                color:lawngreen;
+                background-color: rgb(4, 102, 116);
+            }
+         </style>
+    </head>
+    <body>
+        <!--Class Selector-->
+        <h1 class="myheader">Mounika</h1>
+        <div class="myheader">Reddy</div>
+
+        <!--Id Selector-->
+        <p id="mypara">Mounika</p>
+        <div id="mydiv">Reddy</div>
+
+        <!--Group Selectors-->
+        <h1>Mounika</h1>
+        <p>Reddy</p>
+        <div class="group">Mounika</div>
+        <div class="group">Reddy</div>
+        <div id="head">Mounika</div>
+        <div id="header">Reddy</div>
+
+        <!--Nested Selectors-->
+        <div class="myhome">
+            <i id="myroom">
+                <b>Family</b>
+            </i>
+        </div>
+        <i>
+            <div id="myhome">
+                <b class="myroom">Family</b>
+            </div>
+        </i>
+    </body>
+</html>

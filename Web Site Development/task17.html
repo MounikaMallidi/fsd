@@ -1,0 +1,738 @@
+<html>
+    <head>
+        <title>Task-17</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            
+            .parent{
+                width:100vw;
+                height:auto;
+                display:flex;
+                justify-content:space-evenly;
+                flex-wrap:wrap;
+                flex-direction: row;
+                row-gap:45px;
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOLcDALoDrP0WmbwErDP1UdDYC1elEljq0Lw&s");
+                background-size:cover;
+                background-position: center;
+             }
+            .child1{
+                width:280px;
+                height:370px;
+                border:2px solid black;
+                top:50px;
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSKXYS4CNDiHT6OPzhZIEFXAp412xcA2KwWvYuCDTZuKsjwS3o-_kBv_BBWmpgzjyROrQ&usqp=CAU");
+                background-size: 100%;
+                border-radius:20px;
+                position:relative;
+                box-shadow:0px 0px 6px 2px black;
+                
+            }
+            .child01{
+                width:100px;
+                height:100px;
+                border-radius: 100%;
+                background-image: url("https://cdn.123telugu.com/content/wp-content/uploads/2024/01/Mahesh-Babu.jpg");
+                background-size: 100%;
+                border:2px solid black;
+                position:absolute;
+                top:-35px;
+                left:33%;
+                box-shadow:0px 0px 6px 2px rgb(40, 185, 233);
+
+            }
+            .child02{
+                font-size:25px;
+                position:absolute;
+                top:25%;
+                left:18%;
+                font-family:"Merienda";
+
+            }
+            .child03{
+                font-size:20px;
+                position:absolute;
+                top:40%;
+                left:18%;
+                font-style:italic;
+            }
+            .child04{
+                font-size:20px;
+                position:absolute;
+                top:50%;
+                left:18%;
+                font-style:italic;
+            }
+            .child05{
+                font-size:20px;
+                position:absolute;
+                top:60%;
+                left:18%;
+                font-style:italic;
+            }
+            .child06{
+                font-size:20px;
+                position:absolute;
+                top:80%;
+                left:53%;
+                font-style:italic;
+            }
+            .child07{
+                position:absolute;
+                top:90%;
+                left:55%;
+            }
+            .child08{
+                position:absolute;
+                top:90%;
+                left:70%;
+            }
+            .child09{
+                position:absolute;
+                top:90%;
+                left:86%;
+            }
+            .child2{
+                width:280px;
+                height:370px;
+                border:2px solid black;
+                position:relative;
+                top:50px;
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSKXYS4CNDiHT6OPzhZIEFXAp412xcA2KwWvYuCDTZuKsjwS3o-_kBv_BBWmpgzjyROrQ&usqp=CAU");
+                background-size: 100%;
+                border-radius:20px;
+                box-shadow:0px 0px 6px 2px black;
+                
+            }
+            .child11{
+                width:100px;
+                height:100px;
+                border-radius: 100%;
+                background-image: url("https://i.pinimg.com/236x/d7/6a/e2/d76ae21dbf1000717575c72ee4bbc37f.jpg");
+                background-size: 100%;
+                border:2px solid black;
+                position:absolute;
+                top:-35px;
+                left:33%;
+                box-shadow:0px 0px 6px 2px rgb(40, 185, 233);
+
+            }
+            .child12{
+                font-size:25px;
+                position:absolute;
+                top:25%;
+                left:40%;
+                font-family:"Merienda";
+
+            }
+            .child13{
+                font-size:20px;
+                position:absolute;
+                top:40%;
+                left:18%;
+                font-style:italic;
+            }
+            .child14{
+                font-size:20px;
+                position:absolute;
+                top:50%;
+                left:18%;
+                font-style:italic;
+            }
+            .child15{
+                font-size:20px;
+                position:absolute;
+                top:60%;
+                left:18%;
+                font-style:italic;
+            }
+            .child16{
+                font-size:20px;
+                position:absolute;
+                top:80%;
+                left:53%;
+                font-style:italic;
+            }
+            .child17{
+                position:absolute;
+                top:90%;
+                left:55%;
+            }
+            .child18{
+                position:absolute;
+                top:90%;
+                left:70%;
+            }
+            .child19{
+                position:absolute;
+                top:90%;
+                left:86%;
+            }            
+            .child3{
+                width:280px;
+                height:370px;
+                border:2px solid black;
+                position:relative;
+                top:50px;
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSKXYS4CNDiHT6OPzhZIEFXAp412xcA2KwWvYuCDTZuKsjwS3o-_kBv_BBWmpgzjyROrQ&usqp=CAU");
+                background-size: 100%;
+                border-radius:20px;
+                box-shadow:0px 0px 6px 2px black;
+            }
+            .child21{
+                width:100px;
+                height:100px;
+                border-radius: 100%;
+                background-image: url("https://i.pinimg.com/736x/4e/3f/a8/4e3fa8c87541c8475aeaa4432696e910.jpg");
+                background-size: 100%;
+                border:2px solid black;
+                position:absolute;
+                top:-35px;
+                left:33%;
+                box-shadow:0px 0px 6px 2px rgb(40, 185, 233);
+
+            }
+            .child22{
+                font-size:25px;
+                position:absolute;
+                top:25%;
+                left:40%;
+                font-family:"Merienda";
+
+            }
+            .child23{
+                font-size:20px;
+                position:absolute;
+                top:40%;
+                left:18%;
+                font-style:italic;
+            }
+            .child24{
+                font-size:20px;
+                position:absolute;
+                top:50%;
+                left:18%;
+                font-style:italic;
+            }
+            .child25{
+                font-size:20px;
+                position:absolute;
+                top:60%;
+                left:18%;
+                font-style:italic;
+            }
+            .child26{
+                font-size:20px;
+                position:absolute;
+                top:80%;
+                left:53%;
+                font-style:italic;
+            }
+            .child27{
+                position:absolute;
+                top:90%;
+                left:55%;
+            }
+            .child28{
+                position:absolute;
+                top:90%;
+                left:70%;
+            }
+            .child29{
+                position:absolute;
+                top:90%;
+                left:86%;
+            }       
+            .child4{
+                width:280px;
+                height:370px;
+                border:2px solid black;
+                position:relative;
+                top:50px;
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSKXYS4CNDiHT6OPzhZIEFXAp412xcA2KwWvYuCDTZuKsjwS3o-_kBv_BBWmpgzjyROrQ&usqp=CAU");
+                background-size: 100%;
+                border-radius:20px;
+                box-shadow:0px 0px 6px 2px black;
+            }
+            .child31{
+                width:100px;
+                height:100px;
+                border-radius: 100%;
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVVEKbKA7DKVMuMp4xYCw-8GB7nx2BZCVHEw&s");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                border:2px solid black;
+                position:absolute;
+                top:-35px;
+                left:33%;
+                box-shadow:0px 0px 6px 2px rgb(40, 185, 233);
+
+            }
+            .child32{
+                font-size:25px;
+                position:absolute;
+                top:25%;
+                left:20%;
+                font-family:"Merienda";
+
+            }
+            .child33{
+                font-size:20px;
+                position:absolute;
+                top:40%;
+                left:18%;
+                font-style:italic;
+            }
+            .child34{
+                font-size:20px;
+                position:absolute;
+                top:50%;
+                left:18%;
+                font-style:italic;
+            }
+            .child35{
+                font-size:20px;
+                position:absolute;
+                top:60%;
+                left:18%;
+                font-style:italic;
+            }
+            .child36{
+                font-size:20px;
+                position:absolute;
+                top:80%;
+                left:53%;
+                font-style:italic;
+            }
+            .child37{
+                position:absolute;
+                top:90%;
+                left:55%;
+            }
+            .child38{
+                position:absolute;
+                top:90%;
+                left:70%;
+            }
+            .child39{
+                position:absolute;
+                top:90%;
+                left:86%;
+            }     
+            .child5{
+                width:280px;
+                height:370px;
+                border:2px solid black;
+                position:relative;
+                top:50px;
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSKXYS4CNDiHT6OPzhZIEFXAp412xcA2KwWvYuCDTZuKsjwS3o-_kBv_BBWmpgzjyROrQ&usqp=CAU");
+                background-size: 100%;
+                border-radius:20px;
+                box-shadow:0px 0px 6px 2px black;
+            }
+            .child41{
+                width:100px;
+                height:100px;
+                border-radius: 100%;
+                background-image: url("https://live.staticflickr.com/65535/33977802088_c250e1e5e6.jpg");
+                background-size: 100% 100%;
+                border:2px solid black;
+                position:absolute;
+                top:-35px;
+                left:33%;
+                box-shadow:0px 0px 6px 2px rgb(40, 185, 233);
+
+            }
+            .child42{
+                font-size:25px;
+                position:absolute;
+                top:25%;
+                left:33%;
+                font-family:"Merienda";
+
+            }
+            .child43{
+                font-size:20px;
+                position:absolute;
+                top:40%;
+                left:18%;
+                font-style:italic;
+            }
+            .child44{
+                font-size:20px;
+                position:absolute;
+                top:50%;
+                left:18%;
+                font-style:italic;
+            }
+            .child45{
+                font-size:20px;
+                position:absolute;
+                top:60%;
+                left:18%;
+                font-style:italic;
+            }
+            .child46{
+                font-size:20px;
+                position:absolute;
+                top:80%;
+                left:53%;
+                font-style:italic;
+            }
+            .child47{
+                position:absolute;
+                top:90%;
+                left:55%;
+            }
+            .child48{
+                position:absolute;
+                top:90%;
+                left:70%;
+            }
+            .child49{
+                position:absolute;
+                top:90%;
+                left:86%;
+            }       
+            .child6{
+                width:280px;
+                height:370px;
+                border:2px solid black;
+                position:relative;
+                top:50px;
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSKXYS4CNDiHT6OPzhZIEFXAp412xcA2KwWvYuCDTZuKsjwS3o-_kBv_BBWmpgzjyROrQ&usqp=CAU");
+                background-size: 100%;
+                border-radius:20px;
+                box-shadow:0px 0px 6px 2px black;
+            }
+            .child51{
+                width:100px;
+                height:100px;
+                border-radius: 100%;
+                background-image: url("https://i.pinimg.com/originals/98/b6/40/98b640924274615f2e7cfc89b707f4af.jpg");
+                background-size: 100% 100%;
+                border:2px solid black;
+                position:absolute;
+                top:-35px;
+                left:33%;
+                box-shadow:0px 0px 6px 2px rgb(40, 185, 233);
+
+            }
+            .child52{
+                font-size:25px;
+                position:absolute;
+                top:25%;
+                left:33%;
+                font-family:"Merienda";
+
+            }
+            .child53{
+                font-size:20px;
+                position:absolute;
+                top:40%;
+                left:18%;
+                font-style:italic;
+            }
+            .child54{
+                font-size:20px;
+                position:absolute;
+                top:50%;
+                left:18%;
+                font-style:italic;
+            }
+            .child55{
+                font-size:20px;
+                position:absolute;
+                top:60%;
+                left:18%;
+                font-style:italic;
+            }
+            .child56{
+                font-size:20px;
+                position:absolute;
+                top:80%;
+                left:53%;
+                font-style:italic;
+            }
+            .child57{
+                position:absolute;
+                top:90%;
+                left:55%;
+            }
+            .child58{
+                position:absolute;
+                top:90%;
+                left:70%;
+            }
+            .child59{
+                position:absolute;
+                top:90%;
+                left:86%;
+            }       
+            .child7{
+                width:280px;
+                height:370px;
+                border:2px solid black;
+                position:relative;
+                top:50px;
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSKXYS4CNDiHT6OPzhZIEFXAp412xcA2KwWvYuCDTZuKsjwS3o-_kBv_BBWmpgzjyROrQ&usqp=CAU");
+                background-size: 100%;
+                border-radius:20px;
+                box-shadow:0px 0px 6px 2px black;
+            }
+            .child61{
+                width:100px;
+                height:100px;
+                border-radius: 100%;
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLoPTBccnw6DCS9Dr3-QlX-x--8kR-J8EYPQ&s");
+                background-size: 100% 100%;
+                border:2px solid black;
+                position:absolute;
+                top:-35px;
+                left:33%;
+                box-shadow:0px 0px 6px 2px rgb(40, 185, 233);
+
+            }
+            .child62{
+                font-size:25px;
+                position:absolute;
+                top:25%;
+                left:30%;
+                font-family:"Merienda";
+
+            }
+            .child63{
+                font-size:20px;
+                position:absolute;
+                top:40%;
+                left:18%;
+                font-style:italic;
+            }
+            .child64{
+                font-size:20px;
+                position:absolute;
+                top:50%;
+                left:18%;
+                font-style:italic;
+            }
+            .child65{
+                font-size:20px;
+                position:absolute;
+                top:60%;
+                left:18%;
+                font-style:italic;
+            }
+            .child66{
+                font-size:20px;
+                position:absolute;
+                top:80%;
+                left:53%;
+                font-style:italic;
+            }
+            .child67{
+                position:absolute;
+                top:90%;
+                left:55%;
+            }
+            .child68{
+                position:absolute;
+                top:90%;
+                left:70%;
+            }
+            .child69{
+                position:absolute;
+                top:90%;
+                left:86%;
+            }   
+               
+    
+        </style>
+    </head>
+    <body style=" background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOLcDALoDrP0WmbwErDP1UdDYC1elEljq0Lw&s');
+                background-size:cover;
+                background-position: center;">
+        
+        <div class="parent">
+            <div class="child1">
+                <div class="child01"></div>
+                <div class="child02">MAHESH BABU</div>
+                <div class="child03">Age: 49</div>
+                <div class="child04">Gender: Male</div>
+                <div class="child05">Address: Hyderabad</div>
+                <div class="child06">SM Accounts:</div>
+                <div class="child07"><a href="https://www.facebook.com/urstrulyMahesh" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+                alt="Facebook" 
+                width="25" 
+                height="25">
+                </a></div>
+                <div class="child08"><a href="https://www.instagram.com/urstrulymahesh" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                    alt="Instagram" width="25" 
+                    height="25">
+                </a></div>
+                <div class="child09"><a href="https://twitter.com/urstrulyMahesh" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" 
+                    alt="Twitter" 
+                    width="25" 
+                    height="25">
+                </a></div>
+            </div>
+            <div class="child2">
+                <div class="child11"></div>
+                <div class="child12">NANI</div>
+                <div class="child13">Age: 41</div>
+                <div class="child14">Gender: Male</div>
+                <div class="child15">Address: Hyderabad</div>
+                <div class="child16">SM Accounts:</div>
+                <div class="child17"><a href="https://www.facebook.com/ActorNaniOfficial/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+                alt="Facebook" 
+                width="25" 
+                height="25">
+                </a></div>
+                <div class="child18"><a href="https://www.instagram.com/NameIsNani/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                    alt="Instagram" width="25" 
+                    height="25">
+                </a></div>
+                <div class="child19"><a href="https://twitter.com/NameIsNani" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" 
+                    alt="Twitter" 
+                    width="25" 
+                    height="25">
+                </a></div>
+            </div>
+            <div class="child3">
+                <div class="child21"></div>
+                <div class="child22">YASH</div>
+                <div class="child23">Age: 39</div>
+                <div class="child24">Gender: Male</div>
+                <div class="child25">Address: Karnataka</div>
+                <div class="child26">SM Accounts:</div>
+                <div class="child27"><a href="https://www.facebook.com/TheNameIsYash/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+                alt="Facebook" 
+                width="25" 
+                height="25">
+                </a></div>
+                <div class="child28"><a href="https://www.instagram.com/thenameisyash" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                    alt="Instagram" width="25" 
+                    height="25">
+                </a></div>
+                <div class="child29"><a href="https://twitter.com/thenameisyash" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" 
+                    alt="Twitter" 
+                    width="25" 
+                    height="25">
+                </a></div>
+            </div>
+            
+            <div class="child4">
+                <div class="child31"></div>
+                <div class="child32">PAWAN KALYAN</div>
+                <div class="child33">Age: 53</div>
+                <div class="child34">Gender: Male</div>
+                <div class="child35">Address: Andhra Pradesh</div>
+                <div class="child36">SM Accounts:</div>
+                <div class="child37"><a href="https://www.facebook.com/PawanKalyan" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+                alt="Facebook" 
+                width="25" 
+                height="25">
+                </a></div>
+                <div class="child38"><a href="https://www.instagram.com/pawankalyan" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                    alt="Instagram" width="25" 
+                    height="25">
+                </a></div>
+                <div class="child39"><a href="https://twitter.com/PawanKalyan" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" 
+                    alt="Twitter" 
+                    width="25" 
+                    height="25">
+                </a></div>
+            </div>
+            <div class="child5">
+                <div class="child41"></div>
+                <div class="child42">PRABHAS</div>
+                <div class="child43">Age: 45</div>
+                <div class="child44">Gender: Male</div>
+                <div class="child45">Address: Madras</div>
+                <div class="child46">SM Accounts:</div>
+                <div class="child47"><a href="https://www.facebook.com/ActorPrabhas" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+                alt="Facebook" 
+                width="25" 
+                height="25">
+                </a></div>
+                <div class="child48"><a href="https://www.instagram.com/actorprabhas" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                    alt="Instagram" width="25" 
+                    height="25">
+                </a></div>
+                <div class="child49"><a href="https://twitter.com/actorprabha?lang=en" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" 
+                    alt="Twitter" 
+                    width="25" 
+                    height="25">
+                </a></div>
+            </div>
+            <div class="child6">
+                <div class="child51"></div>
+                <div class="child52">JR.NTR</div>
+                <div class="child53">Age: 42</div>
+                <div class="child54">Gender: Male</div>
+                <div class="child55">Address: Hyderabad</div>
+                <div class="child56">SM Accounts:</div>
+                <div class="child57"><a href="https://www.facebook.com/jrntr" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+                alt="Facebook" 
+                width="25" 
+                height="25">
+                </a></div>
+                <div class="child58"><a href="https://www.instagram.com/jrntr" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                    alt="Instagram" width="25" 
+                    height="25">
+                </a></div>
+                <div class="child59"><a href="https://twitter.com/tarak9999" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" 
+                    alt="Twitter" 
+                    width="25" 
+                    height="25">
+                </a></div>
+            </div>
+            <div class="child7">
+                <div class="child61"></div>
+                <div class="child62">ALLUARJUN</div>
+                <div class="child63">Age: 42</div>
+                <div class="child64">Gender: Male</div>
+                <div class="child65">Address: Hyderabad</div>
+                <div class="child66">SM Accounts:</div>
+                <div class="child67"><a href="https://www.facebook.com/AlluArjun" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+                alt="Facebook" 
+                width="25" 
+                height="25">
+                </a></div>
+                <div class="child68"><a href="https://www.instagram.com/alluarjunonline" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                    alt="Instagram" width="25" 
+                    height="25">
+                </a></div>
+                <div class="child69"><a href="https://twitter.com/alluarjun" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" 
+                    alt="Twitter" 
+                    width="25" 
+                    height="25">
+                </a></div>
+            </div>
+        </div>
+        <div class="p"></div>
+    </body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Gardening</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    /* Homepage Section */
+    .homepage {
+      position: relative;
+      height: 100vh;
+      background: url('hoempage.png') no-repeat center center/cover;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+    
+    .left-box {
+      width:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items: center;
+    }
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+    .left-box h1 {
+      font-size: 2.6em;
+      color: #333;
+      margin-bottom: 10px;
+      line-height: 1.2em;
+    }
+
+    .left-box h1 strong {
+      color: #3e8c3e;
+    }
+
+    .left-box h2 {
+      font-size: 1.4em;
+      color: #33ee62;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    .left-box p {
+      font-size: 1em;
+      color: #070707;
+      line-height: 1.6em;
+      margin-bottom: 30px;
+    }
+
+    .create {
+      display: inline-block;
+      padding: 14px 28px;
+      background-color: #aaffcc;
+      color: #006600;
+      font-size: 16px;
+      font-weight: 500;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 8px 16px rgba(0, 255, 128, 0.3);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .create:hover {
+      background-color: #81fa95;
+      box-shadow: 0 10px 20px rgba(0, 255, 128, 0.4);
+      transform: scale(1.05);
+    }
+
+    /* Category Section */
+    #categories {
+      padding: 60px 20px;
+      background:url('blurredback.jpeg') no-repeat center center/cover;
+    }
+
+    .category-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .category {
+      text-align: center;
+      width: 180px;
+      display: inline-block;
+    }
+
+    .circle-border {
+      width: 160px;
+      height: 160px;
+      border: 4px solid #3a7f4d;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .circle-inner {
+      width: 130px;
+      height: 130px;
+      background-color: #f9cdd1;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .circle-inner img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .category:hover .circle-border {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(58, 127, 77, 0.6);
+    }
+
+    .category:hover .circle-inner {
+      transform: scale(1.08);
+    }
+
+    .category-label {
+      font-size: 15px;
+      color: white;
+      margin-top: 10px;
+    }
+
+    /* === Third Section: New Layout === */
+    .info-section {
+      background-color: #f8f8f8;
+      padding: 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      gap: 40px;
+    }
+
+    .info-left {
+      flex: 1 1 55%;
+      min-width: 300px;
+    }
+
+    .info-left h2 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: #2c5f2d;
+    }
+
+    .info-left p {
+      font-size: 1em;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .info-left .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #67c267;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .info-left ul {
+      list-style-type: none;
+      padding: 0;
+      columns: 2;
+    }
+
+    .info-left ul li {
+      margin-bottom: 8px;
+      padding-left: 18px;
+      position: relative;
+      color: #3e8c3e;
+    }
+
+    .info-left ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #3e8c3e;
+    }
+
+    .info-right {
+      flex: 1 1 40%;
+      min-width: 280px;
+    }
+
+    .mini-card {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    .mini-card img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .mini-card-content h4 {
+      margin: 0;
+      font-size: 1.1em;
+      color: #2c5f2d;
+    }
+
+    .mini-card-content p {
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .mini-card-content .btn {
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 0.8em;
+      padding: 5px 12px;
+      background-color: #8ed38e;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 768px) {
+    .left-box h1 {
+      font-size: 1.9em; /* Slightly smaller for mobile */
+    }
+
+    .left-box h2 {
+      font-size: 1.2em; /* Adjust for better readability */
+    }
+
+    .left-box p {
+       font-size: 0.8em; /* Slightly smaller text to avoid excessive increase */
+       line-height: 1.4em; /* Adjust line height for better mobile reading */
+      }  
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+    .info-left, .info-right {
+        width: 100%;
+      }
+
+    }
+  @media (max-width: 425px) {
+  .left-box h1 {
+    font-size: 1.5em; /
+  }
+
+  .left-box h2 {
+    font-size: 1.0em; 
+  }
+
+  .left-box p {
+    /* font-size: 0.85em; 
+    line-height: 1.1em;  */
+    display:none;
+  }
+
+  .create {
+    font-size: 13px; 
+    padding: 12px 24px; 
+  }
+}
+@media (max-width: 375px) {
+  .left-box h1 {
+    font-size: 1.6em; /
+  }
+
+  .left-box h2 {
+    font-size: 1em; 
+  }
+
+  .left-box p {
+    /* font-size: 0.8em; 
+    line-height: 1.2em;  */
+    display:none;
+  }
+
+  .create {
+    font-size: 12px; 
+    padding: 10px 20px; 
+  }
+}
+@media (max-width: 325px) {
+  
+  .left-box h1 {
+    font-size: 1.4em; 
+  }
+
+  .left-box h2 {
+    font-size: 0.9em; 
+  }
+
+  .left-box p {
+    /* font-size: 0.75em; 
+    line-height: 1.1em; */
+    display: none;
+  }
+
+  .create {
+    font-size: 10px; 
+    padding: 8px 18px;
+  }
+}
+@media (max-width: 730px){
+  .left-box p{
+    display: none;
+  }
+  .left-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  .homepage{
+    justify-content: center;
+  }
+} 
+  </style>
+</head>
+<body>
+
+  <!-- Homepage Section -->
+  <section class="homepage">
+    <div class="left-box">
+      <!-- <img src="logo.png" alt="EcoVana Logo" class="logo"> -->
+      <h1>Build Your Own <span>Beautiful Garden</span></h1>
+      <h2>A Beginner Guide</h2>
+      <p>
+        At the heart of our service is a deep understanding of what makes home gardening successful. From customized plant recommendations to troubleshooting tools, we equip you with everything needed for long-term growth.
+      </p>
+      <a href="#" class="create" role="button">Create Account</a>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section id="categories">
+    <div class="category-container">
+      <div class="category">
+        <div class="circle-border"><div class="circle-inner"><img src="plants.jpeg" alt="Plants"></div></div>
+        <div class="category-label">Plants</div>
+      </div>
+      <div class="category">
+        <div class="circle-border"><div class="circle-inner"><img src="plantcare.jpeg" alt="Seeds"></div></div>
+        <div class="category-label">Plant Care</div>
+      </div>
+      <div class="category">
+        <div class="circle-border"><div class="circle-inner"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShVW8LIRkPzwvWgbOsqlMhQi0QCsR3HK4YPQ&s" alt="Essentials"></div></div>
+        <div class="category-label">Essentials</div>
+      </div>
+      <div class="category">
+        <div class="circle-border"><div class="circle-inner"><img src="plantnurseries.jpeg" alt="Gardening Essentials"></div></div>
+        <div class="category-label">NearBy Nurseries</div>
+      </div>
+      <div class="category">
+        <div class="circle-border"><div class="circle-inner"><img src="plantai.jpeg" alt="Pots & Planters"></div></div>
+        <div class="category-label">AI ChatBot</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Third Section (Updated as per Image) -->
+  <section class="info-section">
+    <div class="info-left">
+      <h2>Decorate your life with us!</h2>
+      <p>EcoVana is committed to transforming your living space with green, sustainable, and thriving gardens. Whether you're a beginner or an expert, we provide tailored gardening solutions to suit your needs. Our easy-to-use tools and expert advice ensure your garden flourishes effortlessly.
+         At EcoVana, we understand that each garden is unique. From plant recommendations based on your local climate to eco-friendly gardening tools and tips, we are here to help you create a garden that's both beautiful and sustainable.
+        Join us on a journey to bring nature into your home and make your life greener, one plant at a time!</p>
+      <a href="#" class="btn">More Info</a>
+      <h3>Our Main Services</h3>
+      <ul>
+       <li>Personalized plant selection based on your garden's unique needs</li>
+       <li>Expert guidance on organic gardening practices</li>
+       <li>Eco-friendly pest control solutions for a healthier garden</li>
+       <li>Seasonal planting recommendations for year-round growth</li>
+       <li>Indoor gardening tips to brighten up your living space</li>
+       <li>Comprehensive garden maintenance advice for long-term success</li>
+       <li>Tailored garden designs to suit your style and space</li>
+       <li>Access to a community of gardening enthusiasts for support and ideas</li>
+       <li>Guidance on choosing sustainable, eco-friendly gardening tools</li>
+       <li>Educational resources to help you grow your gardening knowledge</li>
+      </ul>
+    </div>
+
+    <div class="info-right">
+      <div class="mini-card">
+        <img src="plantabout.jpeg" alt="Why Choose Us">
+        <div class="mini-card-content">
+          <h4>Why Choose Ecovana?</h4>
+          <p>EcoVana provides sustainable, eco-friendly gardening solutions that are customized to meet your unique needs. Our expert team ensures that your garden thrives with natural, efficient practices.</p>
+          <a href="#" class="btn">More</a>
+        </div>
+      </div>
+
+      <div class="mini-card">
+        <img src="plantknowmore.jpeg" alt="Our Experience">
+        <div class="mini-card-content">
+          <h4>Our Vision</h4>
+          <p>At EcoVana, our goal is to revolutionize home gardening by offering innovative and environmentally responsible solutions. We are committed to helping you build beautiful, sustainable gardens that benefit both you and the planet.</p>
+          <a href="#" class="btn">More</a>
+        </div>
+      </div>
+
+      <div class="mini-card">
+        <img src="plantservices.jpeg" alt="How We Work">
+        <div class="mini-card-content">
+          <h4>How We Work</h4>
+          <p>At EcoVana, we focus on a transparent and collaborative process. From the initial consultation to your garden's long-term maintenance, we guide you through every step, always prioritizing sustainability and creativity.</p>
+          <a href="#" class="btn">More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

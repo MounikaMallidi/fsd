@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght,FILL,GRAD@100..900&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; font-family:"Inter",sans-serif; }
+body { width:100%; min-height:100vh; background:linear-gradient(#EEEEFF,#C8C7FF); }
+
+/* Chatbot toggle */
+#chatbot-toggler {
+  position:fixed; bottom:30px; right:35px;
+  height:50px; width:50px; border:none; border-radius:50%;
+  background:#5350C4; display:flex; align-items:center;
+  justify-content:center; cursor:pointer;
+  box-shadow:0 0 20px rgba(0,0,0,0.1); transition:0.2s;
+}
+body.show-chatbot #chatbot-toggler { transform:rotate(90deg); }
+#chatbot-toggler span { color:#fff; position:absolute; }
+#chatbot-toggler span:last-child,
+body.show-chatbot #chatbot-toggler span:first-child { opacity:0; }
+body.show-chatbot #chatbot-toggler span:last-child { opacity:1; }
+
+/* Popup */
+.chatbot-popup {
+  position:fixed; right:35px; bottom:90px; width:420px;
+  background:#fff; border-radius:15px;
+  opacity:0; pointer-events:none; transform:scale(0.2);
+  transform-origin:bottom right;
+  box-shadow:0 0 128px rgba(0,0,0,0.1),0 32px 64px -48px rgba(0,0,0,0.5);
+  transition:all 0.1s ease;
+}
+body.show-chatbot .chatbot-popup {
+  opacity:1; pointer-events:auto; transform:scale(1);
+}
+
+/* Header */
+.chat-header {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:15px 22px; background:#5350C4;
+}
+.header-info { display:flex; gap:10px; align-items:center; }
+.chatbot-logo { width:35px; height:35px; padding:6px; fill:#5350C4; background:#fff; border-radius:50%; }
+.logo-text { color:#fff; font-weight:600; font-size:1.31rem; letter-spacing:0.02rem; }
+#close-chatbot { border:none; color:#fff; height:40px; width:40px; font-size:1.9rem; cursor:pointer; background:none; border-radius:50%; transition:0.2s; }
+#close-chatbot:hover { background:#3d39ac; }
+
+/* Body */
+.chat-body {
+  padding:25px 22px; display:flex; flex-direction:column;
+  gap:20px; height:460px; overflow-y:auto; margin-bottom:82px;
+  scrollbar-width:thin; scrollbar-color:#ccccf5 transparent;
+}
+.message { display:flex; gap:11px; align-items:center; }
+.bot-avatar { width:35px; height:35px; padding:6px; fill:#fff; background:#5350C4; border-radius:50%; }
+.message-text { padding:12px 16px; max-width:75%; font-size:0.95rem; }
+.bot-message.thinking .message-text { padding:2px 16px; }
+
+/* Footer */
+.chat-footer { position:absolute; bottom:0; width:100%; padding:15px 22px 20px; background:#fff; }
+.chat-form {
+  display:flex; align-items:center; position:relative;
+  background:#fff; border-radius:32px; outline:1px solid #CCCCE5;
+  box-shadow:0 0 8px rgba(0,0,0,0.06);
+  transition:0s ease, border-radius 0s;
+}
+.chat-form:focus-within { outline:2px solid #5350C4; }
+.message-input {
+  width:100%; height:47px; resize:none; border:none; outline:none;
+  max-height:180px; scrollbar-width:transparent;
+  border-radius:inherit; font-size:0.95rem;
+  padding:14px 0 12px 18px;
+}
+.chat-controls {
+  display:flex; gap:3px; height:47px; padding-right:6px;
+  align-items:center; align-self:flex-end;
+}
+.chat-controls button {
+  height:35px; width:35px; border:none; cursor:pointer;
+  color:#706DB0; font-size:1.15rem; border-radius:50%;
+  background:none; transition:0.2s ease;
+}
+.chat-controls button:hover,
+body.show-emoji-picker .chat-controls #emoji-picker {
+  color:#3d39ac; background:#f1f1ff;
+}
+#send-message { color:#fff; display:none; background:#5350C4; }
+#send-message:hover { background:#3d39ac; }
+.message-input:valid ~ .chat-controls #send-message { display:block; }
+
+/* File upload */
+.file-upload-wrapper { position:relative; height:35px; width:35px; }
+.file-upload-wrapper :where(button,img) { position:absolute; }
+.file-upload-wrapper img { width:100%; height:100%; object-fit:cover; border-radius:50%; }
+.file-upload-wrapper #file-cancel { color:#ff0000; }
+.file-upload-wrapper.file-uploaded img,
+.file-upload-wrapper.file-uploaded:hover #file-cancel { display:block; }
+.file-upload-wrapper.file-uploaded #file-upload,
+.file-upload-wrapper :where(img,#file-cancel) { display:none; }
+
+/* Emoji picker */
+em-emoji-picker {
+  position:absolute; left:50%; top:-337px;
+  width:100%; max-width:350px;
+  visibility:hidden; max-height:330px;
+  transform:translateX(-50%);
+}
+body.show-emoji-picker em-emoji-picker { visibility:visible; }
+
+/* Responsive */
+@media (max-width:520px){
+  #chatbot-toggler { right:20px; bottom:20px; }
+  .chatbot-popup { right:0; bottom:0; width:100%; height:100%; border-radius:0; }
+  .chat-header { padding:12px 15px; }
+  .chat-body { height:calc(90% - 55px); padding:25px 15px; }
+  .chat-footer { padding:10px 15px 15px; }
+  .file-upload-wrapper.file-uploaded #file-cancel { opacity:0; }
+}

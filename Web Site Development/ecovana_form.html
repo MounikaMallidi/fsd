@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ecovana Gardening Assistant</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #f0fdf4, #dcfce7);
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      color: #166534;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 30px auto;
+      background: #ffffffd9;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      border-radius: 15px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #14532d;
+    }
+
+    input[type="text"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #16a34a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #15803d;
+    }
+
+    #response {
+      margin-top: 30px;
+      padding: 20px;
+      background: #fefce8;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #d9f99d;
+    }
+
+    img.leaf {
+      position: fixed;
+      width: 40px;
+      animation: fall 5s linear infinite;
+      opacity: 0.5;
+      filter: drop-shadow(0px 4px 3px rgba(0,0,0,0.2));
+    }
+
+    img.leaf.left {
+      top: -40px;
+      left: 5%;
+      animation-delay: 0s;
+    }
+
+    img.leaf.right {
+      top: -40px;
+      right: 5%;
+      animation-delay: 2s;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+<h1>🌱 Ecovana AI Gardening Assistant</h1>
+
+<!-- Falling Leaves -->
+<img src="https://cdn-icons-png.flaticon.com/512/2909/2909758.png" class="leaf left" />
+<img src="https://cdn-icons-png.flaticon.com/512/2909/2909758.png" class="leaf right" />
+
+<div class="container">
+  <form id="gardenForm">
+    <label>What type of garden are you planning?</label>
+    <input type="text" name="gardenType" required>
+
+    <label>How much sunlight does your garden receive daily?</label>
+    <input type="text" name="sunlight" required>
+
+    <label>What is the typical weather in your area?</label>
+    <input type="text" name="weather" required>
+
+    <label>Which plants do you want to grow?</label>
+    <input type="text" name="plantList" required>
+
+    <label>Do you know the type of soil you’re using?</label>
+    <input type="text" name="soilType" required>
+
+    <label>Do you prefer low-maintenance or high-maintenance plants?</label><br>
+    <input type="checkbox" name="maintenance" value="Low"> Low
+    <input type="checkbox" name="maintenance" value="Medium"> Medium
+    <input type="checkbox" name="maintenance" value="High"> High
+
+    <label>Do you plan to use organic compost or chemical fertilizers?</label><br>
+    <input type="radio" name="fertilizer" value="Organic"> Organic
+    <input type="radio" name="fertilizer" value="Chemical"> Chemical
+    <input type="radio" name="fertilizer" value="Both"> Both
+    <input type="radio" name="fertilizer" value="Not Sure"> Not Sure
+
+    <label>Do you have any personal concerns or custom problems?</label>
+    <textarea name="userQuery" rows="4" placeholder="Ex: My plants always dry out..."></textarea>
+
+    <label>Upload an image of your space (optional):</label>
+    <input type="file" name="image">
+
+    <button type="submit">Submit to AI</button>
+  </form>
+
+  <div id="response"></div>
+</div>
+
+<script>
+document.getElementById('gardenForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  const gardenType = formData.get('gardenType');
+  const sunlight = formData.get('sunlight');
+  const weather = formData.get('weather');
+  const plantList = formData.get('plantList');
+  const soilType = formData.get('soilType');
+  const maintenance = [...form.querySelectorAll('input[name="maintenance"]:checked')].map(cb => cb.value).join(', ');
+  const fertilizer = formData.get('fertilizer');
+  const userQuery = formData.get('userQuery') || '';
+
+  const prompt = `
+You are a gardening expert. Suggest a plan for the following:
+Garden Type: ${gardenType}
+Sunlight: ${sunlight}
+Weather: ${weather}
+Plants: ${plantList}
+Soil: ${soilType}
+Maintenance Preference: ${maintenance}
+Fertilizer Preference: ${fertilizer}
+User’s Concern: ${userQuery}
+
+Return short tips and describe what a beautiful garden with these conditions might look like.
+`;
+
+  const responseDiv = document.getElementById('response');
+  responseDiv.innerHTML = "🌿 Generating your personalized gardening suggestion and visual...";
+
+  try {
+    // === 1. Gemini Pro AI Text ===
+    const textResponse = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=YOUR_API_KEY', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: prompt }] }]
+      })
+    });
+
+    const textData = await textResponse.json();
+    const aiText = textData?.candidates?.[0]?.content?.parts?.[0]?.text || "No AI text generated.";
+
+    // === 2. Generate Image Prompt
+    const imagePrompt = `A realistic garden with ${plantList}, ${sunlight} light, ${weather} weather, and ${soilType} soil`;
+
+    // === 3. Use placeholder image (simulate) ===
+    const imageURL = `https://api.dicebear.com/7.x/shapes/svg?seed=${encodeURIComponent(plantList)}`;
+
+    responseDiv.innerHTML = `
+      <strong>🧠 AI Gardening Suggestion:</strong><br>
+      <p>${aiText}</p>
+      <strong>🌄 AI Visual Representation:</strong><br>
+      <img src="${imageURL}" style="width: 100%; border-radius: 10px; margin-top: 10px;" />
+    `;
+
+  } catch (error) {
+    responseDiv.innerHTML = `❌ Error: ${error.message}`;
+  }
+});
+</script>
+
+</body>
+</html>

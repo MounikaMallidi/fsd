@@ -1,0 +1,283 @@
+<html>
+    <head>
+        <title>Task-16</title>
+        <style>
+            .background{
+                width:100%;
+                height:60%;
+                background-color:rgb(160, 228, 242);
+                position:relative;
+                top:0px;
+            }
+            .sun{
+                width:100px;
+                height:100px;
+                background-color: orangered;
+                border-radius: 100%;
+                filter:blur(5px);
+                position:absolute;
+                top:30px;
+                left:10%;
+            }
+            .tree1{
+                width:60px;
+                height:220px;
+                background-color:rgb(115, 82, 39);
+                position:absolute;
+                bottom:0px;
+                left:1300px;
+            }
+            .tree2{
+                width:100px;
+                height:100px;
+                background-color: green;
+                position:absolute;
+                bottom:200px;
+                left:1280px;
+                border-radius: 100%;
+            }
+            .tree3{
+                width:100px;
+                height:100px;
+                background-color: green;
+                position:absolute;
+                bottom:170px;
+                left:1240px;
+                border-radius: 100%;
+            }
+            .tree4{
+                width:100px;
+                height:100px;
+                background-color: green;
+                position:absolute;
+                bottom:170px;
+                left:1320px;
+                border-radius: 100%;
+            }
+            .tree5{
+                width:40px;
+                height:160px;
+                background-color:rgb(115, 82, 39);
+                position:absolute;
+                bottom:0px;
+                left:350px;
+            }
+            .tree6{
+                width:80px;
+                height:80px;
+                background-color: green;
+                position:absolute;
+                bottom:140px;
+                left:330px;
+                border-radius: 100%;
+            }
+            .tree7{
+                width:80px;
+                height:80px;
+                background-color: green;
+                position:absolute;
+                bottom:100px;
+                left:300px;
+                border-radius: 100%;
+            }
+            .tree8{
+                width:80px;
+                height:80px;
+                background-color: green;
+                position:absolute;
+                bottom:100px;
+                left:360px;
+                border-radius: 100%;
+            }
+            .tree9{
+                width:50px;
+                height:200px;
+                background-color:rgb(115, 82, 39);
+                position:absolute;
+                bottom:0px;
+                left:50px;
+            }
+            .tree10{
+                width:90px;
+                height:90px;
+                background-color: green;
+                position:absolute;
+                bottom:160px;
+                left:30px;
+                border-radius: 100%;
+            }
+            .tree11{
+                width:90px;
+                height:90px;
+                background-color: green;
+                position:absolute;
+                bottom:140px;
+                left:5px;
+                border-radius: 100%;
+            }
+            .tree12{
+                width:90px;
+                height:90px;
+                background-color: green;
+                position:absolute;
+                bottom:140px;
+                left:55px;
+                border-radius: 100%;
+            }
+            .road{
+                width:100%;
+                height:300px;
+                background-color: rgb(49, 46, 46);
+                position:relative;
+                top:0px;
+            }
+             .panels{
+                width:150px;
+                height:10px;
+                background-color: white;
+                position:absolute;
+                top:150px;
+                left:-100px;
+            }
+            .panels1{
+                width:150px;
+                height:10px;
+                background-color: white;
+                position:absolute;
+                top:150px;
+                left:250px;
+            }
+            .panels2{
+                width:150px;
+                height:10px;
+                background-color: white;
+                position:absolute;
+                top:150px;
+                left:650px;
+            }
+            .panels3{
+                width:150px;
+                height:10px;
+                background-color: white;
+                position:absolute;
+                top:150px;
+                left:1050px;
+            }
+            .panels4{
+                width:150px;
+                height:10px;
+                background-color: white;
+                position:absolute;
+                top:150px;
+                left:1400px;
+            }
+            .car1{
+                width:280px;
+                height:50px;
+                background-color: rgb(18, 120, 230);
+                border-radius:23px;
+                position:absolute;
+                top:60px;
+                left:900px;
+            }
+            .car2{
+                width:220px;
+                height:110px;
+                background-color: rgb(18,120,230);
+                border-radius:100%;
+                position:absolute;
+                top:-3px;
+                left:950px;
+            }
+            .car3{
+                width:50px;
+                height:50px;
+                background-color: rgb(24, 24, 24);
+                border-radius:100%;
+                position:absolute;
+                bottom:160px;
+                left:950px;
+            }
+            .car4{
+                width:50px;
+                height:50px;
+                background-color: rgb(24, 24, 24);
+                border-radius:100%;
+                position:absolute;
+                bottom:159px;
+                left:1090px;
+            }
+            .car5{
+                width:20px;
+                height:20px;
+                background-color:white;
+                border-radius:100%;
+                position:absolute;
+                bottom:175px;
+                left:965px;
+            }
+            .car6{
+                width:20px;
+                height:20px;
+                background-color: white;
+                border-radius:100%;
+                position:absolute;
+                bottom:174px;
+                left:1105px;
+            }
+            .car7{
+                width:70px;
+                height:50px;
+                background-color: rgb(179, 199, 199);
+                position:absolute;
+                left:980px;
+                top:10px;
+                border-top-left-radius: 70px;
+
+            }
+            .car8{
+                width:70px;
+                height:50px;
+                background-color: rgb(179, 199, 199);
+                position:absolute;
+                left:1065px;
+                top:10px;
+                border-top-right-radius: 70px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background">
+            <div class="sun"></div>
+            <div class="tree1"></div>
+            <div class="tree2"></div>
+            <div class="tree3"></div>
+            <div class="tree4"></div>
+            <div class="tree5"></div>
+            <div class="tree6"></div>
+            <div class="tree7"></div>
+            <div class="tree8"></div>
+            <div class="tree9"></div>
+            <div class="tree10"></div>
+            <div class="tree11"></div>
+            <div class="tree12"></div>
+        </div>
+        
+        <div class="road">
+            <div class="panels"></div>
+            <div class="panels1"></div>
+            <div class="panels2"></div>
+            <div class="panels3"></div>
+            <div class="panels4"></div>
+            <div class="car1"></div>
+            <div class="car2"></div>
+            <div class="car3"></div>
+            <div class="car4"></div>
+            <div class="car5"></div>
+            <div class="car6"></div>
+            <div class="car7"></div>
+            <div class="car8"></div>
+        </div>
+        
+    </body>
+</html>

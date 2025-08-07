@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Mobile Menu Display</title>
+        <style>
+            body{
+                background-color:black;
+                
+            }
+            .mobile-options{
+                width:200px;
+                height:100svh;
+                background-color:grey;
+                padding:10px;
+                box-sizing: border-box;
+                display:flex;
+                flex-direction:column;
+                align-items:end;
+                cursor:pointer;
+                position:absolute;
+                left:-200px;
+                top:0px;
+                transition:left 0.5s linear;
+            }
+            .mobile-options div{
+                width:100%;
+                font-size:20px;
+                border-bottom: 2px solid black;
+                padding:8px 0px;
+            }
+            .mobile-options div:hover{
+                background-color: rgb(226, 226, 226);
+                border-radius:5px;
+            }
+            span{
+                width:fit-content;
+                font-size:26px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="color:white ;font-size:26px;cursor:pointer" onclick="Open()">&#9776;</div>
+        <div class="mobile-options">
+            <span onclick="Close()">&times;</span>
+            <div>Home</div>
+            <div>About</div>
+            <div>Contact</div>
+            <div>Pricing</div>
+            <div>Services</div>
+        </div>
+        <script>
+            function Close(){
+                document.getElementsByClassName("mobile-options")[0].style="left:-200px;"
+            }
+            function Open(){
+                document.getElementsByClassName("mobile-options")[0].style="left:0px;"
+            }
+        </script>
+    </body>
+</html>

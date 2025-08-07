@@ -1,0 +1,20 @@
+<svg width="100%" height="200" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <!-- Gradient -->
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1bb74f"></stop>
+      <stop offset="100%" stop-color="#61c53d"></stop>
+    </linearGradient>
+
+    <!-- Contour lines (simplified wave paths for effect) -->
+    <pattern id="contours" patternUnits="userSpaceOnUse" width="100" height="40">
+      <path d="M 0 20 Q 25 0, 50 20 T 100 20" fill="none" stroke="#1da54d" stroke-opacity="0.2" stroke-width="1"></path>
+    </pattern>
+  </defs>
+
+  <!-- Background gradient -->
+  <rect x="0" y="0" width="1000" height="200" fill="url(#greenGradient)" rx="12"></rect>
+
+  <!-- Contour overlay -->
+  <rect x="0" y="0" width="1000" height="200" fill="url(#contours)" rx="12"></rect>
+</svg>

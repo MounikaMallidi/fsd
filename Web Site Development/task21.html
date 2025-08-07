@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            body{
+                margin:0;
+                padding:0;
+                width:100%;
+                height:100vh;
+                display:flex;
+                flex-wrap:wrap;
+                justify-content:center;
+                align-items:center;
+                background-image: linear-gradient(to top right,#0a0a0a 10%,#3a4452);
+            }
+            .container{
+                width:350px;
+                height:500px;
+            }
+            .calculator{
+                width:100%;
+                height:100%;
+                border:1px solid #717377;
+                position:relative;
+                padding:20px;
+                border-radius:30px;
+                box-sizing: border-box;
+                background: transparent;
+                box-shadow:0px 3px 20px rgba(113,115,119,0.5)
+            }
+            .display{
+                width:90%;
+                padding:15px;
+                margin-left:17px;
+                background:transparent;
+                box-shadow: 0px 3px 15px rgba(84,84,84,84);
+                font-size:40px;
+                text-align:right;
+            }
+            .buttons{
+                width:100%;
+                height:65%;
+                margin-top:15px;
+                display:grid;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            .last{
+                width:100%;
+                height:15%;
+                display:grid;
+                grid-template-rows: 1fr;
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+            .buttons button{
+                width:50px;
+                height:50px;
+                display:grid;
+                justify-self: center;
+                align-self: center;
+                border-radius: 100%;
+                place-items: center;
+                cursor:pointer;
+                background:transparent;
+                box-shadow: -6px -6px 10px rgba(255,255 ,255,0.3);
+                border:none;
+                font-size:20px;
+                
+
+
+            }
+            .buttons button:active {
+                background-color: rgba(255, 255, 255, 0.2);
+               
+            }
+
+            .buttons button:not(.char){
+                color:white;
+            }
+            .last button{
+                display:grid;
+                justify-self: center;
+                align-self: center;
+                cursor:pointer;
+                
+            }
+            
+
+            .last button:not(.char1){
+                width:50px;
+                height:50px;
+                display:grid;
+                justify-self: center;
+                align-self: center;
+                border-radius: 100%;
+                border:1px solid white;
+                place-items: center;
+                background:transparent;
+                box-shadow: -6px -6px 10px rgba(255,255 ,255,0.3);
+                border:none;
+                font-size:20px;
+                color:white;
+            }
+            .char1{
+                width:130px;
+                height:50px;
+                border:1px solid white;
+                place-items: center;
+                border-radius:100px;
+                background:transparent;
+                box-shadow: -6px -6px 10px rgba(255,255 ,255,0.3);
+                border:none;
+                font-size:20px;
+                color:white;
+            }
+            .char{
+                color:green;
+            }
+            .char2{
+                background-color: orange !important;
+            }
+            .last button:active {
+                background-color: rgba(255, 255, 255, 0.2);
+                
+            }
+            .last .char2:active{
+                background-color: orangered !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="calculator">
+                <input type="text" placeholder="0" class="display"/>
+                <div class="buttons">
+                    <button class="char">AC</button>
+                    <button class="char">DEL</button>
+                    <button class="char">%</button>
+                    <button class="char">/</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button class="char">*</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button class="char">-</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button class="char">+</button>
+                    
+                </div>
+                <div class="last">
+                        <button class="char1">0</button>
+                        <button>.</button>
+                        <button class="char2">=</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

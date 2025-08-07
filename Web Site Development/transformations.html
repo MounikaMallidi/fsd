@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>Transformations</title>
+        <style>
+            body{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .translate{
+                position:relative;
+            }
+            .parent{
+                width:150px;
+                height:150px;
+                background-color: skyblue;
+                position:absolute;
+                transform:translateX(200px);
+            }
+            .parent1{
+                width:150px;
+                height:150px;
+                background-color: skyblue;
+                transform:translateX(-200px);
+                position:absolute;
+            }
+            .parent2{
+                width:150px;
+                height:150px;
+                background-color: skyblue;
+                transform:translateY(200px);
+                position:absolute;
+                
+                
+            }
+            .parent3{
+                width:150px;
+                height:150px;
+                background-color: skyblue;
+                transform:translateY(-200px);
+                position:absolute;
+            }
+            .parent4{
+                width:150px;
+                height:150px;
+                background-color: skyblue;
+                transform:scale(1.5);
+            }
+            .skew{
+                position:relative;
+                
+            }
+            .parent5{
+                width:150px;
+                height:150px;
+                background-color: blueviolet;
+                position:relative;
+                top:700px;
+                left:-450px;
+                 margin-bottom: 20px;
+                 transform: skewX(30deg);
+            }
+            .parent6{
+                width:150px;
+                height:150px;
+                background-color: blueviolet;
+                position:relative;
+                top:530px;
+                left:-200px;
+                margin-bottom: 20px;
+                transform: skewX(-30deg);
+            }
+            .parent7{
+                width:150px;
+                height:150px;
+                background-color: blueviolet;
+                position:relative;
+                top:360px;
+                left:50px;
+                margin-bottom: 20px;
+                transform: skewY(30deg);
+            }
+           .parent8{
+                width:150px;
+                height:150px;
+                background-color: blueviolet;
+                position:relative;
+                top:190px;
+                left:300px;
+                margin-bottom: 20px;
+                transform: skewY(-30deg);
+            }
+            .parent9{
+                width:150px;
+                height:150px;
+                background-color: hotpink;
+                position:relative;
+                top:750px;
+                left:-500px;
+                transform:rotateX(180deg);
+            }
+            .parent10{
+                width:150px;
+                height:150px;
+                background-color: hotpink;
+                position:relative;
+                top:600px;
+                left:-100px;
+                transform:rotateY(180deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="translate">
+            <div class="parent"></div>
+            <div class="parent1"></div>
+            <div class="parent2"></div>
+            <div class="parent3"></div>
+            <div class="parent4"></div>
+        </div>
+        <div class="skew">
+            <div class="parent5"></div>
+            <div class="parent6"></div>
+            <div class="parent7"></div>
+            <div class="parent8"></div>
+        </div>
+        <div class="rotate">
+            <div class="parent9">This is Mallidi Mounika Reddy</div>
+            <div class="parent10">This is Mallidi Mounika Reddy</div>
+        </div>
+    </body>
+</html>

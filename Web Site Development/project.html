@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ecovana Gardening Assistant</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #f0fdf4, #dcfce7);
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      color: #166534;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 30px auto;
+      background: #ffffffd9;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      border-radius: 15px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #14532d;
+    }
+
+    input[type="text"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #16a34a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #15803d;
+    }
+
+    #response {
+      margin-top: 30px;
+      padding: 20px;
+      background: #fefce8;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #d9f99d;
+    }
+
+    img.leaf {
+      position: fixed;
+      width: 40px;
+      animation: fall 5s linear infinite;
+      opacity: 0.5;
+      filter: drop-shadow(0px 4px 3px rgba(0,0,0,0.2));
+    }
+
+    img.leaf.left {
+      top: -40px;
+      left: 5%;
+      animation-delay: 0s;
+    }
+
+    img.leaf.right {
+      top: -40px;
+      right: 5%;
+      animation-delay: 2s;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+
+    /* Chatbot styles */
+    #chatbot-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #16a34a;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 28px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    #chatbot-panel {
+      display: none;
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      overflow: hidden;
+      z-index: 999;
+    }
+
+    #chatbot-panel iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🌱 Ecovana AI Gardening Assistant</h1>
+
+<!-- Falling Leaves -->
+<img src="https://cdn-icons-png.flaticon.com/512/2909/2909758.png" class="leaf left" />
+<img src="https://cdn-icons-png.flaticon.com/512/2909/2909758.png" class="leaf right" />
+
+<!-- Gardening Form -->
+<div class="container">
+  <form id="gardenForm">
+    <!-- [Your original form fields here — kept untouched for design] -->
+    <!-- Form content unchanged -->
+    <label>What type of garden are you planning?</label>
+    <input type="text" name="gardenType" required>
+    <label>How much sunlight does your garden receive daily?</label>
+    <input type="text" name="sunlight" required>
+    <label>What is the typical weather in your area?</label>
+    <input type="text" name="weather" required>
+    <label>Which plants do you want to grow?</label>
+    <input type="text" name="plantList" required>
+    <label>Do you know the type of soil you’re using?</label>
+    <input type="text" name="soilType" required>
+    <label>Do you prefer low-maintenance or high-maintenance plants?</label><br>
+    <input type="checkbox" name="maintenance" value="Low"> Low
+    <input type="checkbox" name="maintenance" value="Medium"> Medium
+    <input type="checkbox" name="maintenance" value="High"> High
+    <label>Do you plan to use organic compost or chemical fertilizers?</label><br>
+    <input type="radio" name="fertilizer" value="Organic"> Organic
+    <input type="radio" name="fertilizer" value="Chemical"> Chemical
+    <input type="radio" name="fertilizer" value="Both"> Both
+    <input type="radio" name="fertilizer" value="Not Sure"> Not Sure
+    <label>Do you have any personal concerns or custom problems?</label>
+    <textarea name="userQuery" rows="4" placeholder="Ex: My plants always dry out..."></textarea>
+    <label>Upload an image of your space (optional):</label>
+    <input type="file" name="image">
+    <button type="submit">Submit to AI</button>
+  </form>
+  <div id="response"></div>
+</div>
+
+<!-- AI Chatbot Button and Panel -->
+<button id="chatbot-button">💬</button>
+
+<div id="chatbot-panel">
+  <iframe src="chatbot.html"></iframe>
+</div>
+
+<script>
+  // Chatbot toggle
+  document.getElementById('chatbot-button').addEventListener('click', () => {
+    const panel = document.getElementById('chatbot-panel');
+    panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+  });
+</script>
+
+</body>
+</html>

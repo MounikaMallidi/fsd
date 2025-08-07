@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Login Signup Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="login.css"/>
+    </head>
+    <body>
+         <main class="container">
+            <input type="checkbox" id="flip-toggle">
+            <section class="card">
+                <section class="side" id="front">
+                    <!--Login Form-->
+                    <header>
+                        <h2>Login</h2>
+                    </header>
+                    <section class="inputfield">
+                        <i class="fa-solid fa-user" style="color: #007bff;"></i>
+                        <input type="text" placeholder="username" >
+                        <i class="fa-solid fa-lock" style="color: #007bff;"></i>
+                        <input type="password" placeholder="password">
+                    </section>
+                    <p>Forgot Password?</p>
+                    <button>Login</button>
+                    <label for="flip-toggle">Don't have an account? Sign up</label>
+                </section>
+                <section class="side" id="back">
+                    <!--sign up Form-->
+                    <header>
+                        <h2>Sign Up</h2>
+                    </header>
+                    <section class="inputfield">
+                        <i class="fa-solid fa-user" style="color: #007bff;"></i>
+                        <input type="text" placeholder="Username">
+                        <i class="fa-solid fa-envelope" style="color: #007bff;"></i>
+                        <input type="email" placeholder="Email">
+                        <i class="fa-solid fa-lock" style="color: #007bff;"></i>
+                        <input type="password" placeholder="Password">
+                        <p>Forgot Password?</p>
+                    </section>
+                    <button>Sign Up</button>
+                    <label for="flip-toggle">Already have an account? Login</label>
+                </section>
+            </section>
+        </main>
+    </body>
+</html>

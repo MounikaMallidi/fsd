@@ -1,0 +1,281 @@
+<html>
+    <head>
+        <title>Flip Kart</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            .container{
+                width:100%;
+                display:flex;
+                flex-wrap:wrap;
+                justify-content:center;
+                align-items:center;
+            }
+            .header{
+                width:100%;
+                height:auto;
+                display:flex;
+                justify-content:space-around;
+                align-items:center;
+                background-color: white;
+                padding:20px 0px;
+                
+            }
+            .search{
+                width:40%;
+                height:40px;
+                display:flex;
+                justify-content:flex-start;
+                align-items:center;
+                background-color:rgb(236, 244, 248);
+                border-radius:10px;
+            }
+            .search_icon{
+                width:5%;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            } 
+            .search_type{
+                width:95%;
+            }
+            .search_type input{
+                width:100%;
+                border:none;
+                background-color: rgb(236, 244, 248);
+                font-size:15px;
+                outline:none;
+            }
+            
+            .content{
+                width:100%;
+                display:flex;
+                flex-wrap:wrap;
+                justify-content:space-evenly;
+                align-items:center;
+                background-color:rgb(237, 237, 237);
+                padding:20px 0px 20px;
+                align-items: stretch;
+            }
+            .box1,.box2{
+                width:32%;
+                padding:25px 10px 10px;
+                background-color: white;
+            }
+            .box1-top{
+                width:100%;
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                margin-bottom:20px;
+            }
+            .info1{
+                font-size:22px;
+                font-weight:bold;
+            }
+            .crc{
+                width:20px;
+                height:20px;
+                border-radius:100%;
+                background-color:#007bff;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+            .box1_bottom{
+                width:100%;
+                display:grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
+                gap:20px;
+            }
+            .child{
+                border:0.5px solid rgb(189, 189, 189);
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                padding:20px 10px;
+            }
+            .child img{
+                flex:1 1 auto;
+                max-width:100%;
+                height:auto;
+                margin-bottom:10px;
+            }
+            .info2,.info3{
+                width:100%;
+                display:flex;
+                justify-content:flex-start;
+                align-items:center;
+                font-size:18px;
+            }
+            .info3{
+                    COLOR:GREEN;
+                font-weight:bold;
+                font-size:16px;
+            }
+            .box3{
+                width:32%;
+                background-color: white;
+            }
+            .box3 img{
+                width: 100%;
+                height:583px;
+            }
+            @media(max-width:1024px){
+                .info1{
+                    font-size:18px;
+                }
+                .info2{
+                    font-size:15px;
+                }
+                .info3{
+                    font-size:14px;
+                }
+                .box3 img{
+                    height:570px;
+                }
+            }
+            @media(max-width:768px){
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content:center;
+                    align-items:center;
+                    row-gap: 20px;
+                }
+                .box1,.box2,.box3{
+                    width:60%;
+                }
+                .box1 {
+                    order: 2;
+                }
+
+                .box2 {
+                    order: 3;
+                }
+
+                .box3 {
+                    order: 1;
+                }
+             }
+             @media(max-width:500px){
+                .box1,.box2,.box3{
+                    width:100%;
+                }
+                .box3 img{
+                    height:450px;
+                }
+                .header span{
+                    display:none;
+                }
+                .search_icon{
+                    width:9%;
+                }
+                .search_type input{
+                    font-size:9px;
+                }
+             }
+             @media(max-width:400px){
+                .search_type input{
+                    font-size:8px ;
+                }
+             }
+             @media(max-width:320px){
+                .box3 img{
+                    height:350px;
+                }
+                .search_type input{
+                    font-size:6.5px;
+                }
+             }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="header">
+                <div class="logo"><img src="./flipkart.png"/></div>
+                <div class="search">
+                    <div class="search_icon">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #616365;"></i>
+                    </div>
+                    <div class="search_type">
+                        <input type="text" placeholder="Search For products,Brands And More"/>
+                    </div>
+                </div>
+                <div class="login"><i class="fa-regular fa-circle-user" style="color: #211c1c;"></i>&nbsp;&nbsp;<span>Login</span>&nbsp;&nbsp;<span><i class="fa-solid fa-angle-down" style="color: #27282b;"></i></span></div>
+                <div class="cart"><i class="fa-solid fa-cart-shopping" style="color: #26282b;"></i>&nbsp;&nbsp;<span>Cart</span></div>
+                <div class="sell"><i class="fa-solid fa-shop" style="color: #242629;"></i>&nbsp;&nbsp;<span>Become a Seller</span></div>
+                <div class="bars"><i class="fa-solid fa-bars" style="color: #222325;"></i></div>
+            </div>
+            <div class="content">
+                <div class="box1">
+                        <div class="box1-top">
+                            <div class="info1">Hair & Skin Care For Monsoon</div>
+                            <div class="crc"><i class="fa-solid fa-greater-than fa-sm" style="color: #2a2d32;"></i></div>
+                        </div>
+                        <div class="box1_bottom">
+                            <div class="child child1">
+                                <img src="./fashwash.jpg"/>
+                                <div class="info2">Fash wash</div>
+                                <div class="info3">Min.50% Off</div>
+                            </div>
+                            <div class="child child2">
+                                <img src="./hairserum.jpg"/>
+                                <div class="info2">Hair Serum</div>
+                                <div class="info3">Min.50% Off</div>
+                            </div>
+                            <div class="child child3">
+                                <img src="./hairclew.jpg"/>
+                                <div class="info2">Hair Clew</div>
+                                <div class="info3">Top Sellers</div>
+                            </div>
+                            <div class="child child4">
+                                <img src="./bathsoap.jpg"/>
+                                <div class="info2">Bath Soap</div>
+                                <div class="info3">Min.50% Off</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <div class="box1-top">
+                            <div class="info1">Fashion's Top Deals</div>
+                            <div class="crc"><i class="fa-solid fa-greater-than fa-sm" style="color: #2a2d32;"></i></div>
+                        </div>
+                        <div class="box1_bottom">
+                            <div class="child child1">
+                                <img src="./slippers.jpg"/>
+                                <div class="info2">Men's Slippers</div>
+                                <div class="info3">Min.70% Off</div>
+                            </div>
+                            <div class="child child2">
+                                <img src="./tshirt.jpg"/>
+                                <div class="info2">Men's T-shirts</div>
+                                <div class="info3">Min.50% Off</div>
+                            </div>
+                            <div class="child child3">
+                                <img src="./shirt.jpg"/>
+                                <div class="info2">Casual Shirts</div>
+                                <div class="info3">Special Offer</div>
+                            </div>
+                            <div class="child child4">
+                                <img src="./saree.jpg"/>
+                                <div class="info2">Women's Sarees</div>
+                                <div class="info3">Special Offer</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box3">
+                        <img src="./flipkart_pic.jpg"/>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>

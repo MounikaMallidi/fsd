@@ -1,0 +1,474 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+ }
+ html{
+    scroll-behavior: smooth;
+ }
+ .container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    flex-wrap: wrap;
+    box-sizing:border-box;
+ }
+
+ /* Navigation Bar */
+.Welcome-navigation {
+    width: 100%;
+    height: 95px;
+    display: flex;
+    position: relative;
+    background-color: #007BFF;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.Welcome-anchortags {
+    height: 95px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Welcome-anchortags a {
+    margin: 0px 10px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    border-radius: 18px;
+}
+
+.Welcome-anchortags a:hover {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #007BFF;
+}
+
+ 
+.head{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin-bottom:10px;
+    margin-top: 20px;
+}
+.headborder{
+    width:60%;
+    background-color: #007BFF;
+    border-radius:0px 40px 40px 0px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+.heading{
+    
+    color:white;
+    font-size:20px;
+    text-align:center;
+    padding:10px 0px 10px 0px;
+    font-family: "Edu SA Hand", cursive;
+    padding-left:20px;
+}
+.search input {
+  width: 250px;
+  padding: 10px 40px 10px 40px; 
+  border-radius: 30px;
+  font-size: 15px;
+  margin-right:55px;
+  margin-top: 20px;
+  justify-content: space-between;
+  
+}
+
+.search i {
+  position:absolute;
+  margin-left:10px;
+  margin-top:30px;
+  color: #0077B6;
+  font-size: 20px;
+  
+}
+.description{
+    
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    margin:10px;
+}
+.about{
+    width:100%;
+    font-size:20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height:40px;
+    word-spacing:6px;
+    margin-bottom: 20px;
+    color:navy;
+}
+.locations h2{
+    margin-top:0px;
+    font-size:30px;
+    margin-bottom:20px;
+    color: navy;
+}
+.locations button{
+    width:150px;
+    height:50px;
+    margin:60px;
+    margin-right:70px;
+    margin-top:20px;
+    border-radius:30px;
+    background-image: radial-gradient(white 60%,#007BFF);
+    font-family:"Edu SA Hand", cursive;
+    box-shadow:2px 2px 5px grey;
+    border:none;
+    margin-bottom: 50px;
+    color:navy;
+    font-size: 17px;
+}
+.hospitals{
+   
+    width:100%;
+     margin:10px;
+     display:flex;
+     flex-wrap:wrap;
+}
+.kkd{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin-bottom:100px;
+   
+}
+.box{
+    width:60%;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content: space-around;
+    
+}
+.card{
+    width:250px;
+    height:350px;
+    border-radius:30px;
+    border:2px solid grey;
+    display:flex;
+    flex-wrap:wrap;
+    box-shadow:0px 0px 5px blue;
+    margin:20px;
+    background-color: #d5eef5;
+}
+.box1{
+    width: 450px;
+    height:70px;
+    border-radius: 40px 0px 0px 40px;
+    margin-right:0px;
+    margin-top: 140px;
+    background-color: #007BFF;
+    border:1px solid #007BFF;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    box-shadow: 2px 6px 15px grey;
+}
+.locname{
+    width:100%;
+    position:relative;
+   
+}
+.crc{
+    width:62px;
+    height:62px;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    position:absolute;
+    margin-left:2px;
+    margin-top:3px;
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+.crc i {
+  position:absolute;
+  margin-left:10px;
+  margin-top:30px;
+  
+}
+.heading1{
+    text-align:center;
+    margin-top:20px;
+    color:white;
+    font-size:25px;
+    font-style:italic;
+    text-shadow:2px 3px 2px black;
+}
+.rjy{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin-bottom:100px;
+   
+}
+.rjy .box1,.vjy .box1{
+    width: 450px;
+    height:70px;
+    border-radius: 0px 40px 40px 0px;
+    margin-right:0px;
+    margin-top: 140px;
+    background-color:#007BFF;
+    border:1px solid #007BFF;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+.rjy .crc,.vjy .crc{
+    margin-left:385px;
+    display:flex;
+    flex-wrap: wrap;
+}
+.vzg{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin-bottom:100px;
+   
+}
+.vjy{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin-bottom:100px;
+   
+}
+.hyd{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin-bottom:100px;
+   
+}
+.info h2{
+    text-align:center;
+    margin:10px;
+    margin-bottom:20px;
+    color:navy;
+}
+.info p{
+    margin:10px;
+    text-align:justify;
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:navy;
+}
+.info button{
+    height: 30px;
+    border-radius: 20px;
+    cursor:pointer;
+    margin-left:40px;
+    padding:0px 10px;
+    margin-top:20px;
+    font-family: "Edu SA Hand", cursive;
+    background-color: #007bffc4;
+    box-shadow:0px 0px 5px blue;
+    border:2px solid grey;
+    color:white;
+}
+.locations button:hover{
+    box-shadow: 2px 6px 15px grey;
+    cursor:pointer;
+    transform: scale(1.05);
+    z-index: 1;
+}
+.locations button:active {
+    background-color: #007BFF;
+    background-image: none;
+}
+.hospitals .card:hover{
+    box-shadow:0px 0px 10px 5px grey;
+    transform: scale(1.05);
+    z-index: 1;
+}
+button:active{
+    background-color: #007BFF;
+    
+}
+.hospitals h2 .card:hover{
+    font-size:12px;
+}
+.hospitals p .card:hover{
+    font-size:16px;
+}
+.end {
+    width:100%;
+    height:80px;
+    font-family: "Edu SA Hand", cursive;
+    background-color: white;
+    text-align: center;
+    font-size:20px;
+    color:#007BFF;
+    padding:20px;
+    display:flex;
+    flex-wrap:wrap;
+
+}
+.info button a{
+    text-decoration: none;
+    color:white
+}
+button a{
+    text-decoration:none;
+    color:navy;
+}
+
+.hospitals,.cards {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.cities {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:1300px) {
+    .locations button {
+        margin-right:40px;
+        margin-left: 40px;
+        
+    }
+
+    .box1,.rjy .box1 , .vjy .box1{
+        width: 300px;
+    }
+
+    .box {
+        width: 75%;
+    }
+
+   
+}
+
+@media (max-width:1240px) {
+    .box, .vzg .box , .hyd .box{
+        order : 2;
+        width: 100%;
+    }
+
+    .box1, .vzg .box1 , .hyd .box1 {
+        order: 1;
+        width: 500px;
+        height:70px;
+        border-radius: 0px 40px 40px 0px;
+        font-size: 15px;
+        font-size:30px;
+        box-sizing: border-box;
+        padding:15px;
+        color:white;
+        border:1px solid #007BFF;
+        font-style: italic;
+        text-shadow:2px 3px 2px black;
+
+        margin-top: 30px;
+        margin-bottom: 40px;
+       
+        background-image:linear-gradient(to right,white 10%,#007BFF);
+        text-align:right;
+
+       
+       
+    }
+
+    .rjy .box1,.vjy .box1 {
+        width: 500px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    .kkd,.rjy,.vzg,.vjy,.hyd {
+        margin: 20px 0px;
+    }
+    
+    .locations button {
+        margin-right:30px;
+        margin-left: 30px;
+        
+    }
+}
+
+@media (max-width:950px) {
+    .heading {
+        font-size: 17px;
+    }
+}
+
+@media (max-width:810px) {
+    .headborder {
+        width: 80%;
+    }
+    .heading {
+        font-size: 20px;
+    }
+
+
+     .Welcome-navigation {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .Welcome-logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .Welcome-anchortags {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 0;
+    }
+ 
+}
+
+@media (max-width:720px) {
+
+    .heading {
+        font-size: 15px;
+    }
+
+    .about {
+        font-size: 18px;
+    }
+
+    
+}
+
+@media (max-width:550px) {
+
+   
+    .box1,.kkd .box1,.rjy .box1,.vzg .box1 , .vjy .box1 , .hyd .box1 {
+        width: 400px;
+    }
+
+}

@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Timer</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+            .timer{
+                width:250px;
+                height:150px;
+                background-color: black;
+                border-radius:20px;
+                color:white;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                flex-direction:column;
+            }
+            .timer_names{
+                width:100%;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                gap:60px;
+                font-size:14px;
+                margin-top:10px;
+            }
+            .timer_top{
+                width:100%;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                gap:50px;
+                font-size:30px;
+                color: white;
+
+            }
+            .timer_bottom{
+                width:100%;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                gap:50px;
+                font-size:18px;
+            }
+            .pause,.reset{
+                width:fit-content;
+                background-color: rgb(88, 165, 196);
+                padding:4px 8px;
+                border-radius:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="timer">
+            <div class="timer_names">
+                <p>Minute</p>
+                <p>Second</p>
+            </div>
+            <div class="timer_top">
+                <div class="hour"></div>
+                <p>:</p>
+                <div class="minute"></div>
+                <p>:</p>
+                <div class="second"></div>
+            </div>
+            <div class="timer_bottom">
+                <div class="pause">Pause</div>
+                <div class="reset">Reset</div>
+            </div>
+        </div>
+        <script>
+            var time=30;
+            var IntervalName=setInterval(function(){
+                time=time-1;
+                document.getElementsByClassName("minute")[0].innerText=parseInt(time/60);
+                document.getElementsByClassName("minute")[0].innerText=parseInt(time/60);
+                document.getElementsByClassName("second")[0].innerText=time%60;
+            },1000)
+            setTimeout(function(){
+                window.alert("Time Out")
+                clearInterval(IntervalName);
+            },30000)
+            
+        </script>
+    </body>
+</html>

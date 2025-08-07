@@ -1,0 +1,393 @@
+<html>
+    <head>
+        <title>Animation</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing:border-box;
+            }
+            .container{
+                width:100%;
+                min-height:100vh;
+                display:flex;
+                flex-wrap:wrap;
+                align-items: center;
+                justify-content: center;
+            }
+            .nature{
+                width:100%;
+                height:520px;
+                position:relative;
+                background-color:linear-gradient(skyblue,white);
+                animation:bg 20s linear infinite;
+
+            }
+            .road{
+                width:100%;
+                height:180px;
+                position:relative;
+                background-color: black;
+            }
+            .panels{
+                width:100%;
+                height:180px;
+                position: relative;
+            }
+            .panel1{
+                width:200px;
+                height:20px;
+                background-color: white;
+                position:absolute;
+                top:50%;
+                left:-5%;
+            }
+            .panel2{
+                width:200px;
+                height:20px;
+                background-color: white;
+                position:absolute;
+                top:50%;
+                left:25%;
+            }
+            .panel3{
+                width:200px;
+                height:20px;
+                background-color: white;
+                position:absolute;
+                top:50%;
+                left:55%;
+            }
+            .panel4{
+                width:200px;
+                height:20px;
+                background-color: white;
+                position:absolute;
+                top:50%;
+                left:85%;
+            }
+            .car{
+                margin-top:-280px;
+                animation:car 20s linear  infinite ;
+            }
+            .clouds{
+                position:relative;
+                z-index:1;
+                animation:cloud 20s linear infinite;
+            }
+            .sun{
+                width:90px;
+                height:90px;
+                border-radius: 100%;
+                background-color:orangered;
+                margin-left: 1340px;
+                margin-top: -190px;
+                filter:blur(2px);
+                box-shadow:0px 0px 20px 20px yellow;
+                animation:movesun 20s linear infinite;
+                position: relative;
+                
+            }
+            
+            .bird{
+                position:relative;
+                z-index:10;
+            }
+            .bird1{
+                margin-left: 900px;
+                margin-top: -100px;
+                animation:bird 10s linear infinite,bird1fade 20s linear infinite;
+                
+            }
+            .bird2{
+                margin-left: 100px;
+                margin-top: -50px;
+                animation:bird1 10s linear 5s infinite ;
+            }
+            .tree1{
+                margin-top: 24px;
+            }
+            .tree2{
+                margin-top:-340px;
+                margin-left: 1130px;
+            }
+            .tree3{
+                margin-top:-210px;
+                margin-left: 200px;
+            }
+            .cycle{
+                margin-top:-40px;
+                margin-left: 1300px;
+                position:absolute;
+                z-index:1;
+            }
+            .grass{
+                margin-top:-54px;
+                margin-left:280px;
+            }
+            .grass1{
+                margin-top:-50px;
+                margin-left:680px;
+            }
+            .grass2{
+                margin-top:-50px;
+                margin-left:1110px;
+            }
+            .grass3{
+                margin-top:-50px;
+                
+            }
+            .stars{
+                position:relative;
+                animation:star 20s linear infinite;
+            }
+            .light{
+                position:relative;
+            }
+            .crc{
+                position: relative;
+                width:25px;
+                height:15px;
+                border-radius: 0% 0% 100% 100%;
+                background-color: rgb(255, 255, 255);
+                z-index:100;
+                margin-left:1121px;
+                margin-top:-187px;
+                animation:light 20s linear infinite;
+            }
+            @keyframes light{
+                0%{
+                    background-color: white;
+                }
+                50%{
+                    background-color: white;
+                    
+                }
+                75%{
+                    background-color: yellow;
+                    box-shadow: 0px 3px 10px 2px yellow;
+                }
+                100%{
+                    background-color: yellow;
+                    box-shadow: 0px 3px 10px 2px yellow;
+                }
+            }
+            @keyframes car{
+                from{
+                    margin-left:0px;
+                }
+                to{
+                    margin-left:1200px;
+                }
+            }
+            @keyframes bird1fade {
+                0% { opacity: 1; }
+                50% { opacity: 1; }
+                70% { opacity: 0; }
+                100% { opacity: 0; }
+            }
+            @keyframes star {
+                0% { opacity: 0; }
+                50% { opacity: 0; }
+                70% { opacity: 1; }
+                100% { opacity: 1; }
+            }
+            @keyframes bird{
+                from{
+                    margin-left:0px;
+                }
+                to{
+                    margin-left:1400px;
+                }
+            }
+             @keyframes bird1{
+                from{
+                    margin-left:0px;
+                }
+                to{
+                    margin-left:1400px;
+                }
+            }
+            @keyframes bg {
+                0% {
+                    background-color: skyblue;
+                }
+                25% {
+                    background-color: lightblue;
+                }
+                50% {
+                    background-color: rgb(250, 162, 162);
+                }
+                75% {
+                    background-color: rgb(42, 42, 62);
+                }
+                100% {
+                    background-color: rgb(33, 34, 48);
+                }
+            }
+            @keyframes movesun {
+                0%{
+                    left:0px;
+                    top:0px;
+                    background-color:orangered;
+                    filter:blur(2px);
+                    box-shadow:0px 0px 20px 20px yellow;
+                }
+                10%{
+                    left:0px;
+                    top:0px;
+                     background-color:orangered;
+                    filter:blur(2px);
+                    box-shadow:0px 0px 20px 20px yellow;
+                }
+                25%{
+                    left:0px;
+                    top:0px;
+                    background-color:orangered;
+                    filter:blur(2px);
+                    box-shadow:0px 0px 10px 10px yellow;
+                }
+                30%{
+                     left:0px;
+                    top:0px;
+                    background-color:orangered;
+                    filter:blur(2px);
+                    box-shadow:0px 0px 10px 10px yellow;
+                }
+                50%{
+                   left:-80px;
+                   top:52px;
+                   box-shadow: none;
+                   background-color:white;
+                }
+                75%{
+                    box-shadow:0px 0px 10px 10px grey;
+                    background-color: white;
+                    left:-40px;
+                    top:26px;
+                }
+                90%{
+                    left:-20px;
+                    top:13px;
+                }
+                95%{
+                    left:-10px;
+                    top:7px;
+                }
+                100%{
+                    left:0px;
+                    right:0px;
+                    box-shadow:0px 0px 20px 20px grey;
+                    background-color: white;
+                }
+                                
+            }
+            @keyframes cloud {
+                0% { opacity: 1; }
+                50% { opacity: 1; }
+                75% { opacity: 0; }
+                100% { opacity: 0; }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="containter">
+            <div class="nature">
+                <div class="clouds">
+                    <div class="cloud1">
+                        <img src="./clouds1-removebg-preview.png" style="width:200px;height:200px;margin-left:200px;"/>
+                    </div>
+                    <div class="cloud2">
+                        <img src="./clouds1-removebg-preview.png" style="width:200px;height:200px;margin-left:700px;margin-top:-300px;"/>
+                    </div>
+                    <div class="cloud2">
+                        <img src="./clouds1-removebg-preview.png" style="width:200px;height:200px;margin-left:1200px;margin-top:-200px;"/>
+                    </div>
+                </div>
+                <div class="sun"></div>
+                <div class="moon"></div>
+                <div class="bird">
+                    <div class="bird1">
+                        <img src="./bird2-unscreen.gif" style="width:100px;height:150px;"/>
+                    </div>
+                    <div class="bird2">
+                        <img src="./bird3-unscreen.gif" style="width:100px;height:150px;"/>
+                    </div>
+                </div>
+                <div class="trees">
+                    <div class="tree1">
+                        <img src="./tree1-removebg-preview.png" style="width:200px;height:250px;"/>
+                    </div>
+                    <div class="tree2">
+                        <img src="./tree4-removebg-preview.png"  style="width:400px;height:400px;"/>
+                    </div>
+                    <div class="tree3">
+                        <img src="./tree2-removebg-preview.png"  style="width:150px;height:150px;"/>
+                    </div>
+                    <div class="grass">
+                        <img src="./grass1-removebg-preview.png"  style="width:400px;height:50px;"/>
+                    </div>
+                    <div class="grass1">
+                        <img src="./grass1-removebg-preview.png"  style="width:450px;height:50px;"/>
+                    </div>
+                    <div class="grass2">
+                        <img src="./grass1-removebg-preview.png"  style="width:400px;height:50px;"/>
+                    </div>
+                    <div class="grass3">
+                        <img src="./grass1-removebg-preview.png"  style="width:400px;height:50px;"/>
+                    </div>
+                </div>
+                <div class="stars">
+                    <div class="star1">
+                        <img src="./star_hd-removebg-preview.png" style="width:100px;height:50px;margin-left:100px;margin-top: -500px;"/>
+                    </div>
+                    <div class="star2">
+                        <img src="./star_hd-removebg-preview.png" style="width:100px;height:50px;margin-left:200px;margin-top: -360px;"/>
+                    </div>
+                    <div class="star3">
+                        <img src="./star_hd-removebg-preview.png" style="width:100px;height:50px;margin-left:400px;margin-top: -540px;"/>
+                    </div>
+                    <div class="star4">
+                        <img src="./star_hd-removebg-preview.png" style="width:100px;height:50px;margin-left:600px;margin-top: -450px;"/>
+                    </div>
+                    <div class="star5">
+                        <img src="./star_hd-removebg-preview.png" style="width:100px;height:50px;margin-left:700px;margin-top: -540px;"/>
+                    </div>
+                    <div class="star6">
+                        <img src="./star_hd-removebg-preview.png" style="width:100px;height:50px;margin-left:-20px;margin-top: -400px;"/>
+                    </div>
+                    <div class="star7">
+                        <img src="./star_hd-removebg-preview.png" style="width:100px;height:50px;margin-left:900px;margin-top: -500px;"/>
+                    </div>
+                    <div class="star8">
+                        <img src="./star_hd-removebg-preview.png" style="width:100px;height:50px;margin-left:1200px;margin-top: -370px;"/>
+                    </div>
+                    <div class="star9">
+                        <img src="./star_hd-removebg-preview.png" style="width:100px;height:50px;margin-left:1250px;margin-top: -530px;"/>
+                    </div>
+                    <div class="star10">
+                        <img src="./star_hd-removebg-preview.png" style="width:100px;height:50px;margin-left:1450px;margin-top: -470px;"/>
+                    </div>
+                </div>
+                <div class="light">
+                    <img src="./light1-removebg-preview.png" style="width:100px;height:250px;margin-left:1100px;margin-top: -230px;"/>
+                </div>
+                <div class="crc"></div>
+            </div>
+            <div class="road">
+                <div class="panels">
+                    <div class="panel1"></div>
+                    <div class="panel2"></div>
+                    <div class="panel3"></div>
+                    <div class="panel4"></div>
+                    
+                </div>
+                <div class="car">
+                    <img src="./cycle3.gif" style="width:300px;height:220px"/>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>

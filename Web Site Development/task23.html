@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>task-23</title>
+        <style>
+            body{
+                background-image:linear-gradient(to right,black 50%,skyblue 50%);
+            }
+            .demo{
+                width:100px;
+                height:100px;
+                border-radius: 100%;
+                background-color: white;
+                position:relative;
+                top:40%;
+                left:20%;
+                animation:moon 5s linear infinite;
+                transition: box-shadow 3s linear ;
+            }
+            .demo1{
+                width:100px;
+                height:100px;
+                border-radius: 100%;
+                background-color: rgb(232, 74, 17);
+                filter:blur(2px);
+                position:relative;
+                top:27%;
+                left:75%;
+                animation:sun 5s linear infinite;
+                transition: box-shadow 3s linear ;
+            }
+            /*Transition*/
+            /*.demo:hover{
+                box-shadow:0px 0px 30px 7px grey;
+            }
+            .demo1:hover{
+                box-shadow:0px 0px 30px 7px yellow;
+            }*/
+            @keyframes moon{
+                0%{
+                    box-shadow:0px 0px 10px 10px grey;
+                }
+                50%{
+                    box-shadow:0px 0px 20px 20px grey;
+                }
+                100%{
+                    box-shadow:0px 0px 30px 3px grey;
+                }
+            }
+            @keyframes sun{
+                0%{
+                    box-shadow:0px 0px 10px 10px yellow;
+                }
+                50%{
+                    box-shadow:0px 0px 20px 20px yellow;
+                }
+                100%{
+                    box-shadow:0px 0px 30px 3px yellow;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="demo"></div>
+        <div class="demo1"></div>
+    </body>
+</html>

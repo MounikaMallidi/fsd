@@ -1,0 +1,171 @@
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+  }
+
+  .background-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image:url('./formback.jpg');
+    background-size: 100% 100%;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+  }
+
+  .home_button a {
+    text-decoration: none;
+    color: #316931;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 20px;
+    display: inline-block;
+  }
+
+  .leaf {
+    position: absolute;
+    width: 80px;
+    opacity: 0.8;
+  }
+
+  .left {
+    top: 20px;
+    left: 10px;
+  }
+
+  .right {
+    top: 20px;
+    right: 10px;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    padding: 0;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    overflow: hidden;
+  }
+
+  .form-header {
+    background: linear-gradient(to right, #dce35b, #45b649);
+    padding: 30px 10px;
+    text-align: center;
+  }
+
+  .form-header h2 {
+    margin: 0;
+    font-size: 26px;
+    color: #2e7d32;
+  }
+
+  form {
+    padding: 2px 25px 20px;
+  }
+
+  form label {
+    display: block;
+    margin: 20px 0 5px;
+    color: #2e7d32;
+    font-weight: 600;
+  }
+
+  form input[type="text"],
+  form textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #c1e1c1;
+    background: transparent;
+    padding: 8px 4px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  form input[type="text"]:focus,
+  form textarea:focus {
+    border-bottom-color: #2e7d32;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-right: 6px;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .button-wrapper {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  button[type="submit"] {
+    background: linear-gradient(to right, #66bb6a, #43a047);
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  button[type="submit"]:hover {
+    background: linear-gradient(to right, #388e3c, #2e7d32);
+  }
+  input::placeholder,
+    textarea::placeholder {
+    font-size: 13px; 
+    color: #888;   
+    }
+
+</style>
+
+<div class="background-blur"></div>
+<div class="container">
+  <div class="form-header">
+    <h2>ECOVANA AI Gardening Assistant</h2>
+  </div>
+
+  <form id="gardenForm">
+    <label>What type of garden are you planning?</label>
+    <input type="text" name="gardenType" placeholder="e.g: indoor, terrace, balcony, etc.." required>
+
+    <label>How much sunlight does your garden receive daily?</label>
+    <input type="text" name="sunlight" placeholder="e.g: full sun (6+ hrs), partial sun, shade" required>
+
+    <label>What is the typical weather in your area?</label>
+    <input type="text" name="weather" placeholder="e.g: hot and dry, humid, rainy, cold" required>
+
+    <label>Which plants do you want to grow?</label>
+    <input type="text" name="plantList" placeholder="e.g: vegetables, fruits, flowers, herbs etc.." required>
+
+    <label>Do you know the type of soil you’re using?</label>
+    <input type="text" name="soilType" placeholder="e.g: red soil, clay, sandy, unsure" required>
+
+    <label>Do you plan to use organic compost or chemical fertilizers?</label>
+    <input type="radio" name="fertilizer" value="Organic"> Organic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="fertilizer" value="Chemical"> Chemical&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="fertilizer" value="Both"> Both&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="fertilizer" value="Not Sure"> Not Sure
+
+    <label>Do you have any personal concerns or custom problems?</label>
+    <input type="text" name="userQuery" />
+
+    <label>Upload an image of your space (optional):</label>
+    <input type="file" name="image"><br>
+
+    <div class="button-wrapper">
+      <button type="submit">Submit to AI</button>
+    </div>
+  </form>
+</div>

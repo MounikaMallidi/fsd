@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Retrieve Function</title>
+        <style>
+            /* body{
+               display:flex;
+               flex-direction:column;
+               justify-content:center;
+               align-items:center;
+            } */
+            .box{
+                width:200px;
+                height:200px;
+                background-color:skyblue;
+                margin-bottom:200px;
+                margin-top:100px;
+            }
+            .directions{
+                position:relative;
+            }
+            .left,.right,.top,.bottom{
+                position:absolute;
+            }
+            .left{
+                transform:translateX(-100px);
+            }
+            .right{
+                transform:translatex(100px);
+            }
+            .top{
+                transform:translateY(-100px);
+            }
+            .bottom{
+                transform:translateY(100px);
+            }
+
+
+            .my_image{
+                width:200px;
+                height:200px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Paragraph-1</p>
+        <p>Paragraph-2</p>
+        <div class="demo">Div-tag</div>
+        <span class="demo">span-tag</span>
+          <div id="demo-id">Mounika</div>
+        <img class="my_image" src="./bday_boy.avif"/>
+        <button onclick="fun()">Junior_Mounika</button>
+        <!-- <div class="box"></div>
+        <div class="directions">
+            <button class="left" onclick="fun()">left</button>
+            <button class="right" onclick="right_fun()">Right</button>
+            <button class="top" onclick="top_fun()">Top</button>
+            <button class="bottom" onclick="bottom_fun()">Bottom</button>
+        </div> -->
+        <script>
+            console.log(document.getElementsByTagName("p"));
+            console.log(document.getElementsByClassName("demo"));
+            console.log(document.getElementById("demo-id"));
+            console.log(document.querySelectorAll("p"));
+            console.log(document.querySelector(".demo"));
+            console.log(document.querySelectorAll("#demo-id"));
+            console.log(document.getElementsByClassName("demo")[1].innerText)
+            document.getElementsByClassName("demo")[1].innerText="Mallidi";
+            console.log(document.getElementsByTagName("div")[0].className)
+            console.log(document.getElementsByTagName("div")[1].id)
+            document.getElementsByTagName("div")[1].id="Hii";
+            console.log(document.getElementsByTagName("div")[1].id)
+            function fun(){
+                document.getElementsByTagName("img")[0].src="http://127.0.0.1:5500/mouni%20pic.jpg" ;
+                document.getElementsByTagName("button")[0].innerText="Senior_Mounika";
+             }
+            // function left_fun(){
+            //     document.getElementsByClassName("box")[0].style="transform:translateX(-100px);";
+            // }
+            // function right_fun(){
+            //     document.getElementsByClassName("box")[0].style="transform:translateX(100px);";
+            // }
+            // function top_fun(){
+            //     document.getElementsByClassName("box")[0].style="transform:translateY(-100px);";
+            // }
+            // function bottom_fun(){
+            //     document.getElementsByClassName("box")[0].style="transform:translateY(100px);";
+            // }
+        </script>
+    </body>
+</html>

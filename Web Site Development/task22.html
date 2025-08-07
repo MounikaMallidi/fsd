@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>Task-22</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            .container{
+                width:100%;
+                height:70px;
+                display:flex;
+                flex-wrap:wrap;
+                flex-direction: row;
+                align-items: center;
+                justify-content:space-between;
+                background-color: #007bff;
+            }
+            .opt ul li{
+                padding-right: 30px;
+                font-size: 20px;
+            }
+            .opt ul{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 50px;
+                list-style: none;
+            }
+            
+            .parent{
+                position:relative;
+                display:flex;
+                flex-wrap:wrap;
+                align-items:center;
+            }
+            .child1{
+                width:100%;
+                text-align:center;
+                padding:20px;
+                cursor: pointer;
+                
+            }
+            .child2 {
+                display: none;
+                position: absolute; 
+                top: 100%; 
+                left: 0;
+                background-color:#87ceeb ;
+                padding: 10px;
+                z-index: 1; 
+                cursor: pointer;
+            }
+            .child2 .submenu {
+                padding: 5px 10px;
+            }
+
+            .child2 .submenu:hover {
+                background-color: lightgreen; 
+                color: white;
+            }
+            .parent:hover .child2{
+                display:block;
+            }
+            .icon{
+                position:relative;
+                display:flex;
+                flex-wrap:wrap;
+                flex-direction: row;
+                align-items: center;
+                justify-content:space-between;
+                width:90px;
+                height:70px;
+                background-color: white;
+            }
+            .child1 i{
+                font-size:xx-large;
+                cursor:pointer;
+            }
+            .icon .child2{
+                width:90px;
+            }
+            .icon:hover .child2{
+                display:block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo">
+                <img src="https://thenetmencorp.com/wp-content/uploads/2024/07/apple-logo.webp" style="width:90px;height:70px"/>
+            </div>
+            <div class="opt">
+                <ul>
+                    <li class="parent">
+                        <div class="child1">
+                            Menu
+                        </div>
+                        <div class="child2">
+                            <div class="submenu">option1</div>
+                            <div class="submenu">option2</div>
+                            <div class="submenu">option3</div>
+                        </div>
+                    </li>
+                    <li class="parent">
+                        <div class="child1">
+                            About
+                        </div>
+                        <div class="child2">
+                            <div class="submenu">option1</div>
+                            <div class="submenu">option2</div>
+                            <div class="submenu">option3</div>
+                        </div>
+                    </li>
+                    <li class="parent">
+                        <div class="child1">
+                            Product
+                        </div>
+                        <div class="child2">
+                            <div class="submenu">option1</div>
+                            <div class="submenu">option2</div>
+                            <div class="submenu">option3</div>
+                        </div>
+                    </li>
+                    <li class="parent">
+                        <div class="child1">
+                            Retail
+                        </div>
+                        <div class="child2">
+                            <div class="submenu">option1</div>
+                            <div class="submenu">option2</div>
+                            <div class="submenu">option3</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="icon">
+                <div class="child1">
+                    <i class="fa-solid fa-user fa-2xl" ></i>
+                </div>
+                <div class="child2">
+                    <div class="submenu">Logout</div>
+                    <div class="submenu">Reset Password</div>
+                    <div class="submenu">Edit Profile</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

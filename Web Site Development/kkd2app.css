@@ -1,0 +1,299 @@
+body {
+    background-color: #d6e4fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.Welcome-navigation {
+    width: 100%;
+    height: 95px;
+    display: flex;
+    position: relative;
+    background-color: #007BFF;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.Welcome-anchortags {
+    height: 95px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Welcome-anchortags a {
+    margin: 0px 10px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    border-radius: 18px;
+}
+
+.Welcome-anchortags a:hover {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #007BFF;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.appointment_card {
+    width: 600px;
+    box-shadow: 0px 0px 16px #0056b3;
+    background-color: white;
+    border-radius: 35px;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.appointment_card:hover {
+    box-shadow: 0px 0px 22px #0056b3;
+}
+
+.appo_hosp_img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 600px;
+    margin-left: 30px;
+}
+
+.appo_hosp_img img {
+    height: 400px;
+    width: 400px;
+    margin-top: 20px;
+    border-radius: 35px;
+    box-shadow: 0px 0px 16px #465667;
+}
+
+.appo_hosp_img img:hover {
+    box-shadow: 0px 0px 22px #465667;
+}
+
+.appointment_front_form {
+    background-color: #feffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 35px;
+    color: #0056b3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #0056b3;
+    font-weight: 500;
+    width: 600px;
+}
+
+.appo_name_loc {
+    height: 80px;
+    margin-top: 30px;
+}
+
+.appo_hosp_name {
+    font-size: 40px;
+    color: #0056b3;
+}
+
+.appo_book_heading {
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.appo_book_title {
+    font-size: 28px;
+    padding-bottom: 5px;
+    font-family: "Edu SA Hand", cursive;
+}
+
+.appo_book_descri {
+    font-size: 14px;
+}
+
+.appo_form {
+    margin-top: 10px;
+}
+
+.appo_form span {
+    text-align: right;
+    margin-right: 12px;
+    width: 10px;
+}
+
+.appo_form .label-text {
+    font-size: 20px;
+    text-align: left;
+    display: inline-block;
+    width: 180px;
+    margin-right: 10px;
+}
+
+.appo_form input,
+.appo_form select {
+    margin-bottom: 10px;
+    height: 30px;
+    border-radius: 20px;
+    outline: none;
+    color: #0056b3;
+    border-width: 1px;
+    padding-left: 10px;
+    border-color: #73b2f5;
+    width: 210px;
+}
+
+input[type="checkbox"] {
+    height: 14px;
+    width: 14px;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+
+button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    color: #0056b3;
+    margin-left: 80px;
+    margin-right: 30px;
+    border-radius: 10px;
+    border-color: #0056b3;
+}
+
+input[type="reset"] {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 9px;
+    width: auto;
+    height: auto;
+    color: #0056b3;
+    border: 2px solid #0056b3;
+    border-radius: 10px;
+    border-color: #0056b3;
+}
+
+button:hover {
+    color: white;
+    background-color: #00C853;
+    border-color: white;
+}
+
+input[type="reset"]:hover {
+    color: rgb(250, 249, 249);
+    border-color: white;
+    background-color: rgb(214, 17, 17);
+}
+
+::placeholder {
+    color: #2477cf;
+    font-size: 14px;
+}
+
+input[type="date"] {
+    color: #2477cf;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.appointment_after_booking {
+    background-color: #feffff;
+    width: 40%;
+    height: 230px;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    margin-left: 25%;
+    margin-top: 13%;
+    box-shadow: 0px 0px 16px #0056b3;
+    padding: 20px;
+    border-radius: 35px;
+}
+
+.appointment_after_booking:hover {
+    box-shadow: 0px 0px 23px #0056b3;
+}
+
+.appointment_after_booking h2,
+p {
+    color: #00C853;
+}
+
+.back_to_form_btn {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+/* For tablets and below (<= 900px) */
+@media (max-width: 900px) {
+    .Welcome-navigation {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .Welcome-logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .Welcome-anchortags {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+ 
+}
+
+
+@media (max-width: 730px) {
+   
+   
+   .appointment_card {
+    width: 550px;
+   }
+
+   .appointment_front_form {
+    width: 550px;
+   }
+
+    .appo_hosp_img img{
+        height: 350px;
+        width: 350px;
+   }
+}
+
+@media (max-width:600px) {
+    
+   .appointment_card {
+    width: 460px;
+   }
+
+   .appointment_front_form {
+    width: 460px;
+   }
+    .appo_hosp_img img{
+        height: 300px;
+        width: 300px;
+   }
+  
+}

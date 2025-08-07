@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Animations</title>
+        <style>
+            .demo{
+                width:150px;
+                height:150px;
+                background-color:skyblue;
+                position:relative;
+                animation-name: myanimation;
+                animation-duration:5s;
+                animation-iteration-count: infinite;
+                /* animation-delay: 6s; */
+                animation-timing-function: ease-in;
+                /*animation:myanimation 5s ease-in 1s infinite alternate*/
+            }
+            .demo1{
+                width:150px;
+                height:150px;
+                background-color:red;
+                position: relative;
+                animation: myanimation;
+                animation-duration:5s;
+                animation-iteration-count: 5;
+                /* animation-delay: 3s; */
+                animation-timing-function: ease-out;
+                /* animation-direction: alternate; */
+                
+
+            }
+            .demo2{
+                width:150px;
+                height:150px;
+                background-color:rgb(224, 0, 202);
+                position: relative;
+                animation: myanimation;
+                animation-duration:5s;
+                animation-iteration-count: infinite;
+                /* animation-delay: 1s; */
+                animation-timing-function: ease-in-out;
+                /* animation-direction: reverse; */
+            }
+            .demo3{
+                width:150px;
+                height:150px;
+                background-color:rgb(79, 224, 120);
+                position: relative;
+                animation: myanimation;
+                animation-duration:5s;
+                animation-iteration-count: infinite;
+                /* animation-delay: 4s; */
+                animation-timing-function: linear;
+                /* animation-direction: alternate-reverse; */
+            }
+            @keyframes myanimation{
+                0%{
+                    left:0px;
+    
+                }
+                25%{
+                    left:100px;
+                }
+                50%{
+                    left:200px;
+                }
+                100%{
+                    left:500px;
+                   background-color: black;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Ease-in function</h1>
+        <div class="demo"></div>
+        <h1>Ease-out function</h1>
+        <div class="demo1"></div>
+        <h1>Ease-in-out function</h1>
+        <div class="demo2"></div>
+        <h1>Linear Function</h1>
+        <div class="demo3"></div>
+    </body>
+</html>

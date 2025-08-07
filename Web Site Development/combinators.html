@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Combinators</title>
+        <style>
+            .parent p{
+                color:aqua;
+            }
+            .parent1>div{
+                color:red;
+            }
+            .parent2 p+div{
+                color:rgb(9, 245, 84);
+            }
+            .parent3 div~p{
+                color:rgb(255, 0, 212);
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Mounika</h1>
+        <p>Mallidi</p>
+
+        
+        <h1>Space Combinators</h1>
+        <div class="parent">
+            <p>Mallidi</p>
+            <div> 
+                <h1>Hii</h1>
+                <p>Mounika</p>
+                <i>Hello</i>
+                <div>
+                    <p>Reddy</p>
+                </div>
+            </div>
+        </div>
+
+
+        <h1>> combinators</h1>
+        <div class="parent1">
+            <span>Child1</span>
+            <div>
+                <span>Child2</span>
+            </div>
+            <p>Child3</p>
+            <div>
+                <i>Child4</i><br/>
+                <span>Child5</span>
+            </div>
+            <span>Child5</span>
+            <div>Child6</div>
+        </div>
+
+
+        <h1>+ combinator</h1>
+        <div class="parent2">
+            <div>Divison</div>
+            <p>Paragraph</p>
+            <div>Division</div>
+            <i>italic</i>
+            <p>Paragraph</p>
+            <div>
+                <i>italic</i>
+            </div>
+            <p>Paragraph</p></div>
+
+
+        <h1>~ combinator</h1>
+        <div class="parent3">
+            <div>Divison</div>
+            <p>Paragraph</p>
+            <div>Division</div>
+            <i>italic</i>
+            <p>Paragraph</p>
+           <b>bold</b>
+            <p>Paragraph</p></div>
+    </body>
+</html>

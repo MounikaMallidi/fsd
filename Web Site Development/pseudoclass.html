@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Pseudo Classes</title>
+        <style>
+            a:link{
+                color:green;
+            }
+            a:visited{
+                color:red;
+            }
+            a:hover{
+                color:aqua;
+                background-color: pink;
+            }
+            a:active{
+                color:gold;
+                background-color:black;
+            }
+            button:hover{
+                color:rgb(217, 17, 6);
+                background-color: chartreuse;
+            }
+            button:active{
+                color:aquamarine;
+                background-color: cornflowerblue;
+            }
+            input:hover{
+                color:rgb(217, 17, 6);
+                background-color: rgb(4, 0, 255);
+            }
+            input:focus{
+                color:darkorchid;
+                background-color: lightcoral;
+            }
+            .parent > div :nth-child(2){
+                color:aqua;
+            }
+            .parent1 div:not(.parent2){
+                color:red;
+            }
+            .parent3 div+span :nth-child(1){
+                color:brown;
+            }
+            .parent4 div~span :nth-child(1){
+                color:brown;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Links and Hover and Active</h3>
+        <a href="https://fonts.google.com/">Google Fonts</a>
+        <h3>Hover and Active</h3>
+        <button>submit</button>
+        <h3>Hover and Focus</h3>
+        <input type="text" placeholder="username"/>
+        <h3>nth-child</h3>
+        <div class="parent">
+            <div>child1</div>
+            <div>
+                <div>
+                    <p>child2</p>
+                    <div>child3</div>
+                </div>
+                <div>child4</div>
+            </div>
+            <div>child5</div>
+            <div>child6</div>
+        </div>
+        <h1>not</h1>
+        <div class="parent1">
+            <div class="parent2">div1</div>
+            <h5>heading1</h5>
+            <div>
+                <div>div2</div>
+            </div>
+            <span>span1</span>
+            <p>para1</p>
+            <span>span2</span>
+        </div>
+        <h2>Combinations(pseudo class and combinators)</h2>
+        <div class="parent3">
+            <div>child1</div>
+            <span>
+                <p>child2</p>
+            </span>
+            <p>child3</p>
+            <span>
+                <div>child4</div>
+            </span>
+        </div><br/><br/>
+        <div class="parent4">
+            <div>child1</div>
+            <span>
+                <p>child2</p>
+            </span>
+            <p>child3</p>
+            <span>
+                <div>child4</div>
+            </span>
+        </div>
+
+    </body>
+</html>

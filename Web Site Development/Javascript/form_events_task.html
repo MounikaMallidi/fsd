@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Form_Events</title>
+        <script>
+            function fun(event){
+                event.preventDefault();
+                alert("The Form Was Submitted");
+            }
+            function funs(event){
+                event.preventDefault();
+                alert("The Form Was reset");
+            }
+            function fun1(name){
+                console.log("Name:",name);
+            }
+            function fun2(dadname){
+                console.log("Father Name:",dadname)
+            }
+            function fun3(momname){
+                console.log("Mother Name:",momname)
+            }
+            function fun4(date){
+                console.log("DOB:",date);
+            }
+            function fun5(gender){
+                console.log("Gender:",gender);
+            }
+            function fun6(skills){
+                console.log("Skill:",skills);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Curriculum Vitae</h1>
+        <form onsubmit="fun(event)" onreset="funs(event)">
+            <label>Name:&nbsp;&nbsp;</label>
+            <input type="text" onchange="fun1(this.value)" required/><br/><br/>
+            <label>Father name:&nbsp;&nbsp;</label>
+            <input type="text" onchange="fun2(this.value)" required/><br/><br/>
+            <label>Mother Name:&nbsp;&nbsp;</label>
+            <input type="text" onchange="fun3(this.value)" required><br/><br/>
+            <label>DOB:&nbsp;&nbsp;</label>
+            <input type="date" onchange="fun4(this.value)"/><br/><br/>
+            <label>Gender:&nbsp;&nbsp;</label>
+            <select name="gender" onchange="fun5(this.value)" required>
+                <option value="">Choose</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select><br/><br/>
+            <label>Skills:&nbsp;&nbsp;</label>
+            <input type="radio" name="prog_lang" value="C" onchange="fun6(this.value)"/>
+            <label>C</label>
+            <input type="radio" name="prog_lang" value="C++" onchange="fun6(this.value)"/>
+            <label>C++</label>
+            <input type="radio" name="prog_lang" value="Python" onchange="fun6(this.value)"/>
+            <label>python</label>
+            <input type="radio" name="prog_lang" value="Java" onchange="fun6(this.value)"/>
+            <label>Java</label><br/><br/>
+            <button type="submit">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="reset">Reset</button>
+        </form>
+    </body>
+</html>
